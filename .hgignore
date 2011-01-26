@@ -1,0 +1,32 @@
+
+syntax: regexp
+\.db$
+syntax: regexp
+^MossWeb/mossweb/public/moss_analysis$
+syntax: regexp
+^MossWeb/data/sessions$
+syntax: regexp
+^MossWeb/development_mysql\.ini$
+syntax: regexp
+^MossWeb/data$
+syntax: regexp
+^MossWeb/CoMoTo\.egg-info$
+syntax: regexp
+^MossWeb/data$
+syntax: regexp
+^MossWeb/data$
+syntax: regexp
+^MossWeb/data$
+syntax: regexp
+\.tmp.*
+syntax: regexp
+.*\.pyc
+syntax: regexp
+.*\.class
+
+syntax: regexp
+^MossWeb/Paste-1\.7\.5\.1-py2\.6\.egg$
+syntax: regexp
+^MossWeb/PasteDeploy-1\.3\.4-py2\.6\.egg$
+syntax: regexp
+^MossWeb/PasteScript-1\.7\.3-py2\.6\.egg$
