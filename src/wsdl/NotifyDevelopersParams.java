@@ -1,5 +1,5 @@
 
-package jplag;
+package wsdl;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -18,8 +18,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="userdata" type="{http://www.ipd.uni-karlsruhe.de/jplag/types}UserData"/>
- *         &lt;element name="oldUsername" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="subject" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="message" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -30,63 +30,63 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "userdata",
-    "oldUsername"
+    "subject",
+    "message"
 })
-@XmlRootElement(name = "setUserDataParams")
-public class SetUserDataParams {
+@XmlRootElement(name = "notifyDevelopersParams")
+public class NotifyDevelopersParams {
 
     @XmlElement(required = true)
-    protected UserData userdata;
-    @XmlElement(required = true, nillable = true)
-    protected String oldUsername;
+    protected String subject;
+    @XmlElement(required = true)
+    protected String message;
 
     /**
-     * Gets the value of the userdata property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link UserData }
-     *     
-     */
-    public UserData getUserdata() {
-        return userdata;
-    }
-
-    /**
-     * Sets the value of the userdata property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link UserData }
-     *     
-     */
-    public void setUserdata(UserData value) {
-        this.userdata = value;
-    }
-
-    /**
-     * Gets the value of the oldUsername property.
+     * Gets the value of the subject property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getOldUsername() {
-        return oldUsername;
+    public String getSubject() {
+        return subject;
     }
 
     /**
-     * Sets the value of the oldUsername property.
+     * Sets the value of the subject property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setOldUsername(String value) {
-        this.oldUsername = value;
+    public void setSubject(String value) {
+        this.subject = value;
+    }
+
+    /**
+     * Gets the value of the message property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getMessage() {
+        return message;
+    }
+
+    /**
+     * Sets the value of the message property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setMessage(String value) {
+        this.message = value;
     }
 
 }

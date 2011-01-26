@@ -1,5 +1,5 @@
 
-package jplag;
+package wsdl;
 
 import javax.xml.ws.WebFault;
 
@@ -45,7 +45,7 @@ public class JplagException
     /**
      * 
      * @return
-     *     returns fault bean: jplag.JPlagException
+     *     returns fault bean: wsdl.JPlagException
      */
     public JPlagException getFaultInfo() {
         return faultInfo;

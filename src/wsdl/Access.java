@@ -1,5 +1,5 @@
 
-package jplag;
+package wsdl;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -18,8 +18,9 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="subject" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="message" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="username" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="password" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="compatLevel" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -30,63 +31,81 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "subject",
-    "message"
+    "username",
+    "password",
+    "compatLevel"
 })
-@XmlRootElement(name = "notifyDevelopersParams")
-public class NotifyDevelopersParams {
+@XmlRootElement(name = "Access")
+public class Access {
 
     @XmlElement(required = true)
-    protected String subject;
+    protected String username;
     @XmlElement(required = true)
-    protected String message;
+    protected String password;
+    protected int compatLevel;
 
     /**
-     * Gets the value of the subject property.
+     * Gets the value of the username property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getSubject() {
-        return subject;
+    public String getUsername() {
+        return username;
     }
 
     /**
-     * Sets the value of the subject property.
+     * Sets the value of the username property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setSubject(String value) {
-        this.subject = value;
+    public void setUsername(String value) {
+        this.username = value;
     }
 
     /**
-     * Gets the value of the message property.
+     * Gets the value of the password property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getMessage() {
-        return message;
+    public String getPassword() {
+        return password;
     }
 
     /**
-     * Sets the value of the message property.
+     * Sets the value of the password property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setMessage(String value) {
-        this.message = value;
+    public void setPassword(String value) {
+        this.password = value;
+    }
+
+    /**
+     * Gets the value of the compatLevel property.
+     * 
+     */
+    public int getCompatLevel() {
+        return compatLevel;
+    }
+
+    /**
+     * Sets the value of the compatLevel property.
+     * 
+     */
+    public void setCompatLevel(int value) {
+        this.compatLevel = value;
     }
 
 }

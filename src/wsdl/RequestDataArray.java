@@ -1,5 +1,5 @@
 
-package jplag;
+package wsdl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="items" type="{http://www.ipd.uni-karlsruhe.de/jplag/types}MailTemplate" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="items" type="{http://www.ipd.uni-karlsruhe.de/wsdl/types}RequestData" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -32,10 +32,10 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "", propOrder = {
     "items"
 })
-@XmlRootElement(name = "MailTemplateArray")
-public class MailTemplateArray {
+@XmlRootElement(name = "RequestDataArray")
+public class RequestDataArray {
 
-    protected List<MailTemplate> items;
+    protected List<RequestData> items;
 
     /**
      * Gets the value of the items property.
@@ -55,13 +55,13 @@ public class MailTemplateArray {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link MailTemplate }
+     * {@link RequestData }
      * 
      * 
      */
-    public List<MailTemplate> getItems() {
+    public List<RequestData> getItems() {
         if (items == null) {
-            items = new ArrayList<MailTemplate>();
+            items = new ArrayList<RequestData>();
         }
         return this.items;
     }

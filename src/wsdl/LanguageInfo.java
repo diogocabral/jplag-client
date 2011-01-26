@@ -1,5 +1,5 @@
 
-package jplag;
+package wsdl;
 
 import java.util.ArrayList;
 import java.util.List;

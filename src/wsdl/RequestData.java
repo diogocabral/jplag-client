@@ -1,37 +1,31 @@
 
-package jplag;
+package wsdl;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * <p>Java class for UserData complex type.
+ * <p>Java class for RequestData complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="UserData">
+ * &lt;complexType name="RequestData">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
+ *         &lt;element name="validateTime" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="username" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="password" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="created" type="{http://www.w3.org/2001/XMLSchema}dateTime"/>
- *         &lt;element name="createdBy" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="expires" type="{http://www.w3.org/2001/XMLSchema}dateTime"/>
- *         &lt;element name="lastUsage" type="{http://www.w3.org/2001/XMLSchema}dateTime"/>
- *         &lt;element name="numOfSubs" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="realName" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="email" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="emailSecond" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="homepage" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="reason" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="notes" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="state" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -41,50 +35,61 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "UserData", propOrder = {
+@XmlType(name = "RequestData", propOrder = {
+    "validateTime",
     "username",
     "password",
-    "created",
-    "createdBy",
-    "expires",
-    "lastUsage",
-    "numOfSubs",
     "realName",
     "email",
     "emailSecond",
     "homepage",
     "reason",
-    "notes",
-    "state"
+    "notes"
 })
-public class UserData {
+public class RequestData {
 
     @XmlElement(required = true, nillable = true)
+    protected String validateTime;
+    @XmlElement(required = true, nillable = true)
     protected String username;
-    @XmlElement(required = true)
+    @XmlElement(required = true, nillable = true)
     protected String password;
-    @XmlElement(required = true)
-    protected XMLGregorianCalendar created;
-    @XmlElement(required = true)
-    protected String createdBy;
     @XmlElement(required = true, nillable = true)
-    protected XMLGregorianCalendar expires;
-    @XmlElement(required = true, nillable = true)
-    protected XMLGregorianCalendar lastUsage;
-    protected int numOfSubs;
-    @XmlElement(required = true)
     protected String realName;
-    @XmlElement(required = true)
+    @XmlElement(required = true, nillable = true)
     protected String email;
     @XmlElement(required = true, nillable = true)
     protected String emailSecond;
     @XmlElement(required = true, nillable = true)
     protected String homepage;
-    @XmlElement(required = true)
+    @XmlElement(required = true, nillable = true)
     protected String reason;
     @XmlElement(required = true, nillable = true)
     protected String notes;
-    protected int state;
+
+    /**
+     * Gets the value of the validateTime property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getValidateTime() {
+        return validateTime;
+    }
+
+    /**
+     * Sets the value of the validateTime property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setValidateTime(String value) {
+        this.validateTime = value;
+    }
 
     /**
      * Gets the value of the username property.
@@ -132,118 +137,6 @@ public class UserData {
      */
     public void setPassword(String value) {
         this.password = value;
-    }
-
-    /**
-     * Gets the value of the created property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public XMLGregorianCalendar getCreated() {
-        return created;
-    }
-
-    /**
-     * Sets the value of the created property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public void setCreated(XMLGregorianCalendar value) {
-        this.created = value;
-    }
-
-    /**
-     * Gets the value of the createdBy property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getCreatedBy() {
-        return createdBy;
-    }
-
-    /**
-     * Sets the value of the createdBy property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setCreatedBy(String value) {
-        this.createdBy = value;
-    }
-
-    /**
-     * Gets the value of the expires property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public XMLGregorianCalendar getExpires() {
-        return expires;
-    }
-
-    /**
-     * Sets the value of the expires property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public void setExpires(XMLGregorianCalendar value) {
-        this.expires = value;
-    }
-
-    /**
-     * Gets the value of the lastUsage property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public XMLGregorianCalendar getLastUsage() {
-        return lastUsage;
-    }
-
-    /**
-     * Sets the value of the lastUsage property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public void setLastUsage(XMLGregorianCalendar value) {
-        this.lastUsage = value;
-    }
-
-    /**
-     * Gets the value of the numOfSubs property.
-     * 
-     */
-    public int getNumOfSubs() {
-        return numOfSubs;
-    }
-
-    /**
-     * Sets the value of the numOfSubs property.
-     * 
-     */
-    public void setNumOfSubs(int value) {
-        this.numOfSubs = value;
     }
 
     /**
@@ -388,22 +281,6 @@ public class UserData {
      */
     public void setNotes(String value) {
         this.notes = value;
-    }
-
-    /**
-     * Gets the value of the state property.
-     * 
-     */
-    public int getState() {
-        return state;
-    }
-
-    /**
-     * Sets the value of the state property.
-     * 
-     */
-    public void setState(int value) {
-        this.state = value;
     }
 
 }

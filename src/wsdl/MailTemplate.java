@@ -1,26 +1,25 @@
 
-package jplag;
+package wsdl;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * <p>Java class for MailTemplate complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType>
+ * &lt;complexType name="MailTemplate">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="exceptionType" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="description" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="repair" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="subject" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="data" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -30,91 +29,90 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "exceptionType",
-    "description",
-    "repair"
+@XmlType(name = "MailTemplate", propOrder = {
+    "name",
+    "subject",
+    "data"
 })
-@XmlRootElement(name = "JPlagException")
-public class JPlagException {
+public class MailTemplate {
 
     @XmlElement(required = true)
-    protected String exceptionType;
+    protected String name;
     @XmlElement(required = true)
-    protected String description;
+    protected String subject;
     @XmlElement(required = true)
-    protected String repair;
+    protected String data;
 
     /**
-     * Gets the value of the exceptionType property.
+     * Gets the value of the name property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getExceptionType() {
-        return exceptionType;
+    public String getName() {
+        return name;
     }
 
     /**
-     * Sets the value of the exceptionType property.
+     * Sets the value of the name property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setExceptionType(String value) {
-        this.exceptionType = value;
+    public void setName(String value) {
+        this.name = value;
     }
 
     /**
-     * Gets the value of the description property.
+     * Gets the value of the subject property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getDescription() {
-        return description;
+    public String getSubject() {
+        return subject;
     }
 
     /**
-     * Sets the value of the description property.
+     * Sets the value of the subject property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setDescription(String value) {
-        this.description = value;
+    public void setSubject(String value) {
+        this.subject = value;
     }
 
     /**
-     * Gets the value of the repair property.
+     * Gets the value of the data property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getRepair() {
-        return repair;
+    public String getData() {
+        return data;
     }
 
     /**
-     * Sets the value of the repair property.
+     * Sets the value of the data property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setRepair(String value) {
-        this.repair = value;
+    public void setData(String value) {
+        this.data = value;
     }
 
 }

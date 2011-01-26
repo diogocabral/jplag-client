@@ -1,5 +1,5 @@
 
-package jplag;
+package wsdl;
 
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
@@ -34,7 +34,7 @@ public interface JPlagTyp {
      * 			
      * 
      * @return
-     *     returns jplag.ServerInfo
+     *     returns wsdl.ServerInfo
      * @throws JplagException
      */
     @WebMethod(action = "http://www.ipd.uni-karlsruhe.de/jplag/getServerInfo")
@@ -124,7 +124,7 @@ public interface JPlagTyp {
      * 
      * @param submissionID
      * @return
-     *     returns jplag.Status
+     *     returns wsdl.Status
      * @throws JplagException
      */
     @WebMethod(action = "http://www.ipd.uni-karlsruhe.de/jplag/getStatus")
@@ -167,7 +167,7 @@ public interface JPlagTyp {
      * 
      * @param submissionID
      * @return
-     *     returns jplag.StartResultDownloadData
+     *     returns wsdl.StartResultDownloadData
      * @throws JplagException
      */
     @WebMethod(action = "http://www.ipd.uni-karlsruhe.de/jplag/startResultDownload")
@@ -253,7 +253,7 @@ public interface JPlagTyp {
      * 
      * @param dummy
      * @return
-     *     returns jplag.UserDataArray
+     *     returns wsdl.UserDataArray
      * @throws JplagException
      */
     @WebMethod(action = "http://www.ipd.uni-karlsruhe.de/jplag/getUserDataArray")
@@ -341,7 +341,7 @@ public interface JPlagTyp {
      * 
      * @param lengthOnly
      * @return
-     *     returns jplag.RequestDataArray
+     *     returns wsdl.RequestDataArray
      * @throws JplagException
      */
     @WebMethod(action = "http://www.ipd.uni-karlsruhe.de/jplag/getAccountRequests")
@@ -410,7 +410,7 @@ public interface JPlagTyp {
      * 
      * @param type
      * @return
-     *     returns jplag.MailTemplateArray
+     *     returns wsdl.MailTemplateArray
      * @throws JplagException
      */
     @WebMethod(action = "http://www.ipd.uni-karlsruhe.de/jplag/getMailTemplates")

@@ -1,5 +1,5 @@
 
-package jplag;
+package wsdl;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="type" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="template" type="{http://www.ipd.uni-karlsruhe.de/jplag/types}MailTemplate"/>
+ *         &lt;element name="template" type="{http://www.ipd.uni-karlsruhe.de/wsdl/types}MailTemplate"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>

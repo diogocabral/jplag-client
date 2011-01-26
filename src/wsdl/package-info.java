@@ -32,4 +32,4 @@
  * 
  */
 @javax.xml.bind.annotation.XmlSchema(namespace = "http://www.ipd.uni-karlsruhe.de/jplag/types")
-package jplag;
+package wsdl;

@@ -1,5 +1,5 @@
 
-package jplag;
+package wsdl;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -18,6 +18,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
+ *         &lt;element name="submissionParams" type="{http://www.ipd.uni-karlsruhe.de/wsdl/types}Option"/>
  *         &lt;element name="filesize" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="data" type="{http://www.w3.org/2001/XMLSchema}base64Binary"/>
  *       &lt;/sequence>
@@ -30,15 +31,42 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
+    "submissionParams",
     "filesize",
     "data"
 })
-@XmlRootElement(name = "startResultDownloadData")
-public class StartResultDownloadData {
+@XmlRootElement(name = "startSubmissionUploadParams")
+public class StartSubmissionUploadParams {
 
+    @XmlElement(required = true)
+    protected Option submissionParams;
     protected int filesize;
     @XmlElement(required = true)
     protected byte[] data;
+
+    /**
+     * Gets the value of the submissionParams property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Option }
+     *     
+     */
+    public Option getSubmissionParams() {
+        return submissionParams;
+    }
+
+    /**
+     * Sets the value of the submissionParams property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Option }
+     *     
+     */
+    public void setSubmissionParams(Option value) {
+        this.submissionParams = value;
+    }
 
     /**
      * Gets the value of the filesize property.

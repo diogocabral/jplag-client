@@ -1,28 +1,30 @@
 
-package jplag;
+package wsdl;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * <p>Java class for UserData complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType>
+ * &lt;complexType name="UserData">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="oldUsername" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="username" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="password" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="created" type="{http://www.w3.org/2001/XMLSchema}dateTime"/>
+ *         &lt;element name="createdBy" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="expires" type="{http://www.w3.org/2001/XMLSchema}dateTime"/>
+ *         &lt;element name="lastUsage" type="{http://www.w3.org/2001/XMLSchema}dateTime"/>
+ *         &lt;element name="numOfSubs" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="realName" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="email" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="emailSecond" type="{http://www.w3.org/2001/XMLSchema}string"/>
@@ -30,8 +32,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="reason" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="notes" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="state" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="mailSubject" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="mailMessage" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -41,32 +41,37 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "oldUsername",
+@XmlType(name = "UserData", propOrder = {
     "username",
     "password",
+    "created",
+    "createdBy",
     "expires",
+    "lastUsage",
+    "numOfSubs",
     "realName",
     "email",
     "emailSecond",
     "homepage",
     "reason",
     "notes",
-    "state",
-    "mailSubject",
-    "mailMessage"
+    "state"
 })
-@XmlRootElement(name = "FinishRequestData")
-public class FinishRequestData {
+public class UserData {
 
-    @XmlElement(required = true)
-    protected String oldUsername;
-    @XmlElement(required = true)
-    protected String username;
     @XmlElement(required = true, nillable = true)
+    protected String username;
+    @XmlElement(required = true)
     protected String password;
+    @XmlElement(required = true)
+    protected XMLGregorianCalendar created;
+    @XmlElement(required = true)
+    protected String createdBy;
     @XmlElement(required = true, nillable = true)
     protected XMLGregorianCalendar expires;
+    @XmlElement(required = true, nillable = true)
+    protected XMLGregorianCalendar lastUsage;
+    protected int numOfSubs;
     @XmlElement(required = true)
     protected String realName;
     @XmlElement(required = true)
@@ -75,40 +80,11 @@ public class FinishRequestData {
     protected String emailSecond;
     @XmlElement(required = true, nillable = true)
     protected String homepage;
-    @XmlElement(required = true, nillable = true)
+    @XmlElement(required = true)
     protected String reason;
     @XmlElement(required = true, nillable = true)
     protected String notes;
-    @XmlElement(required = true, type = Integer.class, nillable = true)
-    protected Integer state;
-    @XmlElement(required = true, nillable = true)
-    protected String mailSubject;
-    @XmlElement(required = true, nillable = true)
-    protected String mailMessage;
-
-    /**
-     * Gets the value of the oldUsername property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getOldUsername() {
-        return oldUsername;
-    }
-
-    /**
-     * Sets the value of the oldUsername property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setOldUsername(String value) {
-        this.oldUsername = value;
-    }
+    protected int state;
 
     /**
      * Gets the value of the username property.
@@ -159,6 +135,54 @@ public class FinishRequestData {
     }
 
     /**
+     * Gets the value of the created property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public XMLGregorianCalendar getCreated() {
+        return created;
+    }
+
+    /**
+     * Sets the value of the created property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public void setCreated(XMLGregorianCalendar value) {
+        this.created = value;
+    }
+
+    /**
+     * Gets the value of the createdBy property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getCreatedBy() {
+        return createdBy;
+    }
+
+    /**
+     * Sets the value of the createdBy property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setCreatedBy(String value) {
+        this.createdBy = value;
+    }
+
+    /**
      * Gets the value of the expires property.
      * 
      * @return
@@ -180,6 +204,46 @@ public class FinishRequestData {
      */
     public void setExpires(XMLGregorianCalendar value) {
         this.expires = value;
+    }
+
+    /**
+     * Gets the value of the lastUsage property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public XMLGregorianCalendar getLastUsage() {
+        return lastUsage;
+    }
+
+    /**
+     * Sets the value of the lastUsage property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public void setLastUsage(XMLGregorianCalendar value) {
+        this.lastUsage = value;
+    }
+
+    /**
+     * Gets the value of the numOfSubs property.
+     * 
+     */
+    public int getNumOfSubs() {
+        return numOfSubs;
+    }
+
+    /**
+     * Sets the value of the numOfSubs property.
+     * 
+     */
+    public void setNumOfSubs(int value) {
+        this.numOfSubs = value;
     }
 
     /**
@@ -329,73 +393,17 @@ public class FinishRequestData {
     /**
      * Gets the value of the state property.
      * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
      */
-    public Integer getState() {
+    public int getState() {
         return state;
     }
 
     /**
      * Sets the value of the state property.
      * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
      */
-    public void setState(Integer value) {
+    public void setState(int value) {
         this.state = value;
-    }
-
-    /**
-     * Gets the value of the mailSubject property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getMailSubject() {
-        return mailSubject;
-    }
-
-    /**
-     * Sets the value of the mailSubject property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setMailSubject(String value) {
-        this.mailSubject = value;
-    }
-
-    /**
-     * Gets the value of the mailMessage property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getMailMessage() {
-        return mailMessage;
-    }
-
-    /**
-     * Sets the value of the mailMessage property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setMailMessage(String value) {
-        this.mailMessage = value;
     }
 
 }
