@@ -38,13 +38,14 @@
 package edu.illinois.cs.comoto.jplag;
 
 import edu.illinois.cs.comoto.jplag.util.*;
-import edu.illinois.cs.comoto.jplag.wsdl.JPlagService_Impl;
-import edu.illinois.cs.comoto.jplag.wsdl.JPlagTyp_Stub;
-import edu.illinois.cs.comoto.jplag.wsdl.LanguageInfo;
-import edu.illinois.cs.comoto.jplag.wsdl.ServerInfo;
+import edu.illinois.cs.comoto.jplag.wsdl.*;
 import jargs.gnu.CmdLineParser;
 import jargs.gnu.CmdLineParser.OptionException;
 
+import javax.activation.DataHandler;
+import javax.activation.FileDataSource;
+import javax.mail.internet.MimeBodyPart;
+import javax.mail.internet.MimeMultipart;
 import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.TrustManager;
@@ -53,6 +54,7 @@ import javax.xml.rpc.handler.Handler;
 import javax.xml.rpc.handler.HandlerChain;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.FilenameFilter;
 import java.security.cert.X509Certificate;
 import java.text.SimpleDateFormat;
@@ -70,6 +72,19 @@ import java.util.Vector;
  */
 public class JPlagClient {
 
+    /*
+    * Status constants
+    */
+    public static final int JPLAG_UPLOADING = 0;
+    public static final int JPLAG_INQUEUE = 50;
+    public static final int JPLAG_PARSING = 100;
+    public static final int JPLAG_COMPARING = 200;
+    public static final int JPLAG_GENRESULT = 230;
+    public static final int JPLAG_PACKRESULT = 250;
+    public static final int JPLAG_DONE = 300;
+    public static final int JPLAG_ERROR = 400;
+
+
     private CoMoToOption option;
     private JPlagTyp_Stub stub = null;
     private FilenameFilter subdirFileFilter = null;
@@ -84,19 +99,39 @@ public class JPlagClient {
         ServerInfo info;
         try {
             info = stub.getServerInfo();
+            if (!checkOptions(info)) {
+                System.exit(1);
+            }
         } catch (Exception e) {
             ClientUtil.checkException(e);
-            return;
+            System.exit(1);
         }
-        if (!checkOptions(info)) return;
+
 
         System.out.println("Sending files to JPlag");
         String submissionID = sendSubmission();
         if (submissionID == null) return;
 
+        System.out.println("Waiting for result");
+        if (!waitForResult(submissionID)) {
+            return;
+        }
+
+        System.out.println("Downloading result");
+        if (!receiveResult(submissionID)) {
+            return;
+        }
+
+        System.out.println("The result downloaded to output directory");
+
     }
 
     private void parseArgs(String[] args) {
+
+        if (args.length == 0) {
+            printUsage();
+            System.exit(0);
+        }
 
         CmdLineParser parser = new CmdLineParser();
 
@@ -201,16 +236,16 @@ public class JPlagClient {
         System.err.println("");
         optionUsage("-u <username>  --user <username>", "Sets the username. Default: CoMoTo account.");
         optionUsage("-p <password>  --pass <password>", "Sets the password. Default: CoMoTo account.");
-        optionUsage("-l <language>  --language <language>", "Sets the programming language. Use -l ? or --language ? for supported and default languages.");
+        optionUsage("-l <language>  --language <language>", "Sets the programming language.\nUse -l ? or --language ? for supported and default languages.");
         optionUsage("-s <dir>  --source <dir>", "Sets the directory where source code is located. Default is cwd.");
         optionUsage("--subdirs", "Recursively scan subdirectories as well for source code files. Default is disabled.");
-        optionUsage("-e <extensions>  --extensions <extensions>", "A comma separated list of file name extensions to include. Default is language specific.");
-        optionUsage("-t <n>  --tokens <n>", "Sets the minimum match length in tokens. A smaller value increases the sensitivity of the comparison.");
-        optionUsage("-m <matches>  --matches <matches>", "Sets the number of matches to return. If a number is specified, that many matches will be returned. If a number followed by % is specified, matches greater than that similarity % will be returned. Default: 20");
+        optionUsage("-e <extensions>  --extensions <extensions>", "A comma separated list of file name extensions to include.\nDefault is language specific.");
+        optionUsage("-t <n>  --tokens <n>", "Sets the minimum match length in tokens.\nA smaller value increases the sensitivity of the comparison.");
+        optionUsage("-m <matches>  --matches <matches>", "Sets the number of matches to return. If a number is specified, that many\nmatches will be returned. If a number followed by % is specified, matches greater than that similarity % will be returned. Default: 20");
         optionUsage("-b <dir>  --base <dir>", "Sets the directory for base code (typically instructor supplied files)");
         optionUsage("-d <dir>  --destination <dir>", "Sets the destination for output. Default cwd/results/");
         optionUsage("--title <title>", "Sets the title for the outputted report.");
-        optionUsage("--locale <language>", "Sets the language the the output will be written in. Use --locale ? for a list of supported languages and default.");
+        optionUsage("--locale <language>", "Sets the language the the output will be written in.\nUse --locale ? for a list of supported languages and default.");
         optionUsage("-a  --anonymize", "Strips all netids out of source code files. This can be a lengthy process. Default: disabled.");
         optionUsage("-c <type>  --cluster <type>", "Sets the cluster type. May be one of none, min, avr, or max. Default: none.");
         optionUsage("-h  -?  --help  --?", "This text.");
@@ -218,8 +253,8 @@ public class JPlagClient {
     }
 
     private void optionUsage(String option, String helpText) {
-        System.err.println(option);
-        System.err.println("\t" + helpText);
+        System.err.println("\t" + option);
+        System.err.println("\t\t" + helpText.replaceAll("\n", "\n\t\t"));
     }
 
     private void printLanguageHelp(LanguageInfo[] languages) {
@@ -387,7 +422,26 @@ public class JPlagClient {
         FileInputStream input = null;
         String submissionID = null;
 
+        try {
+            zipfile = File.createTempFile("jplagtmp", ".zip");
+            ZipUtil.zipFilesTo(submissionFiles, option.toOption().getOriginalDir(),
+                    zipfile);
 
+            FileDataSource fds = new FileDataSource(zipfile);
+            MimeMultipart mmp = new MimeMultipart();
+            MimeBodyPart mbp = new MimeBodyPart();
+            mbp.setDataHandler(new DataHandler(fds));
+            mbp.setFileName(zipfile.getName());
+            mmp.addBodyPart(mbp);
+
+            submissionID = stub.compareSource(option.toOption(), mmp);
+            zipfile.delete();
+        } catch (Exception e) {
+            System.out.println();
+            ClientUtil.checkException(e);
+            if (zipfile != null) zipfile.delete();
+            System.exit(1);
+        }
         return submissionID;
     }
 
@@ -436,13 +490,95 @@ public class JPlagClient {
         File[] files = dir.listFiles(subdirFileFilter);
 
         for (int i = 0; i < files.length; i++) {
-            System.out.println(files[i].getName());
             if (files[i].isDirectory()) {
                 collectInDir(colfiles, files[i]);
             } else {
                 colfiles.add(files[i]);
             }
         }
+    }
+
+    private boolean waitForResult(String submissionID) {
+        Status status;
+        try {
+            while (true) {
+                status = stub.getStatus(submissionID);
+
+                /*
+                 * Here you could print out more details about the status of
+                 * the submission, but it's left out here...
+                 */
+
+                if (status.getState() >= JPLAG_DONE) {
+                    break;
+                }
+                Thread.sleep(10000);    // wait 10 seconds
+            }
+            if (status.getState() >= JPLAG_ERROR) {
+                /*
+                 * An error occurred: Print out error message and acknowledge
+                 * error by cancelling the submission
+                 */
+                System.out.println("\nSome error occurred: "
+                        + status.getReport());
+                stub.cancelSubmission(submissionID);
+                return false;
+            }
+        } catch (Exception e) {
+            ClientUtil.checkException(e);
+            System.exit(1);
+        }
+        return true;
+    }
+
+    private boolean receiveResult(String submissionID) {
+        File zipfile = null;
+        FileOutputStream output = null;
+
+        try {
+            File resultDir = new File(option.getDestDir());
+            if (!resultDir.exists()) {
+                resultDir.mkdirs();
+            }
+            zipfile = File.createTempFile("jplagtmpresult", ".zip");
+
+            output = new FileOutputStream(zipfile);
+
+            StartResultDownloadData srdd = stub.startResultDownload(submissionID);
+
+            int filesize = srdd.getFilesize();
+            int loadedsize = srdd.getData().length;
+
+            output.write(srdd.getData());
+
+            while (loadedsize < filesize) {
+                byte[] data = stub.continueResultDownload(0);
+                output.write(data);
+                loadedsize += data.length;
+            }
+            output.close();
+
+            /*
+             * Unzip result archive and delete the zip file
+             */
+
+            ZipUtil.unzip(zipfile, resultDir);
+            zipfile.delete();
+        } catch (Exception e) {
+            if (output != null) {
+                try {
+                    output.close();
+                } catch (Exception ex) {
+                }
+            }
+            if (zipfile != null) {
+                zipfile.delete();
+            }
+            ClientUtil.checkException(e);
+            System.exit(1);
+        }
+
+        return true;
     }
 
 

@@ -194,7 +194,9 @@ public class CoMoToOption {
             option.setBasecodeDir(getBaseDir());
         }
         option.setTitle(getTitle());
-        option.setClustertype(getCluster());
+        if (!getCluster().equals("none")) {
+            option.setClustertype(getCluster());
+        }
         option.setOriginalDir(getSourceDir());
         return option;
     }
