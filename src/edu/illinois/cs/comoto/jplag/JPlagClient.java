@@ -37,9 +37,7 @@
 
 package edu.illinois.cs.comoto.jplag;
 
-import edu.illinois.cs.comoto.jplag.util.ClientUtil;
-import edu.illinois.cs.comoto.jplag.util.CoMoToOption;
-import edu.illinois.cs.comoto.jplag.util.JPlagClientAccessHandler;
+import edu.illinois.cs.comoto.jplag.util.*;
 import edu.illinois.cs.comoto.jplag.wsdl.JPlagService_Impl;
 import edu.illinois.cs.comoto.jplag.wsdl.JPlagTyp_Stub;
 import edu.illinois.cs.comoto.jplag.wsdl.LanguageInfo;
@@ -54,10 +52,13 @@ import javax.net.ssl.X509TrustManager;
 import javax.xml.rpc.handler.Handler;
 import javax.xml.rpc.handler.HandlerChain;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FilenameFilter;
 import java.security.cert.X509Certificate;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Iterator;
+import java.util.Vector;
 
 /**
  * Created by IntelliJ IDEA.
@@ -71,6 +72,7 @@ public class JPlagClient {
 
     private CoMoToOption option;
     private JPlagTyp_Stub stub = null;
+    private FilenameFilter subdirFileFilter = null;
 
     public JPlagClient(String[] args) {
         run(args);
@@ -87,6 +89,10 @@ public class JPlagClient {
             return;
         }
         if (!checkOptions(info)) return;
+
+        System.out.println("Sending files to JPlag");
+        String submissionID = sendSubmission();
+        if (submissionID == null) return;
 
     }
 
@@ -371,6 +377,72 @@ public class JPlagClient {
         accessHandler.setUserPassObjects(option.getUsername(), option.getPassword());
 
         return true;
+    }
+
+    private String sendSubmission() {
+        Vector<File> submissionFiles = collectFiles();
+        if (submissionFiles == null) return null;
+
+        File zipfile = null;
+        FileInputStream input = null;
+        String submissionID = null;
+
+
+        return submissionID;
+    }
+
+    private Vector<File> collectFiles() {
+        Vector<File> colfiles = new Vector<File>();
+        File[] files = new File(option.toOption().getOriginalDir()).listFiles(
+                new RecursiveFilenameFilter(option));
+
+        if (files == null) {
+            System.out.println("\"" + option.toOption().getOriginalDir()
+                    + "\" is not a directory or an I/O error occurred!");
+            System.exit(1);
+        }
+
+        if (option.toOption().isReadSubdirs()) {
+            subdirFileFilter = new RecursiveFilenameFilter(option);
+        } else {
+            subdirFileFilter = new NonRecursiveFilenameFilter(option);
+        }
+
+        for (int i = 0; i < files.length; i++) {
+            if (files[i].isDirectory()) {
+                if (option.toOption().getPathToFiles() != null) {
+                    collectInDir(colfiles, new File(files[i],
+                            option.toOption().getPathToFiles()));
+                } else {
+                    collectInDir(colfiles, files[i]);
+                }
+            } else {
+                colfiles.add(files[i]);
+            }
+        }
+
+        if (colfiles.size() <= 1) {
+            System.out.println("\"" + option.toOption().getOriginalDir()
+                    + "\" didn't contain at least two files\n"
+                    + "suitable for the specified options!");
+            return null;
+        }
+        return colfiles;
+    }
+
+    private void collectInDir(Vector<File> colfiles, File dir) {
+        if (!dir.exists()) return;
+
+        File[] files = dir.listFiles(subdirFileFilter);
+
+        for (int i = 0; i < files.length; i++) {
+            System.out.println(files[i].getName());
+            if (files[i].isDirectory()) {
+                collectInDir(colfiles, files[i]);
+            } else {
+                colfiles.add(files[i]);
+            }
+        }
     }
 
 

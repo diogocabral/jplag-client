@@ -49,10 +49,7 @@ import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
 import javax.xml.rpc.handler.Handler;
 import javax.xml.rpc.handler.HandlerChain;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.FilenameFilter;
+import java.io.*;
 import java.rmi.RemoteException;
 import java.security.cert.X509Certificate;
 import java.text.SimpleDateFormat;
@@ -278,11 +275,17 @@ public class ExampleClient {
      * @param dir      The directory which will be searched
      */
     private void collectInDir(Vector<File> colfiles, File dir) {
+        try {
+            System.out.println(dir.getCanonicalPath());
+        } catch (IOException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
         if (!dir.exists()) return;
 
         File[] files = dir.listFiles(subdirFileFilter);
 
         for (int i = 0; i < files.length; i++) {
+            System.out.println(files[i].getName());
             if (files[i].isDirectory()) {
                 collectInDir(colfiles, files[i]);
             } else colfiles.add(files[i]);

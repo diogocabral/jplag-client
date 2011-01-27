@@ -182,7 +182,7 @@ public class CoMoToOption {
         option.setLanguage(getLanguage());
         option.setCountryLang(getLocale());
         option.setReadSubdirs(isSubdirs());
-        option.setPathToFiles(getSourceDir());
+//        option.setPathToFiles(getSourceDir());
         if (getExtensions() != null) {
             option.setSuffixes(getExtensions());
         }
@@ -195,6 +195,7 @@ public class CoMoToOption {
         }
         option.setTitle(getTitle());
         option.setClustertype(getCluster());
+        option.setOriginalDir(getSourceDir());
         return option;
     }
 }

@@ -39,9 +39,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81af9ccd-2a23-4324-8fe9-4953996421e6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/LDAP/StudentData.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/LDAP/UIUCLDAPDownloader.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/JPlagClient_jar.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/NonRecursiveFilenameFilter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/RecursiveFilenameFilter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/ExampleClient.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/ExampleClient.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/JPlagClient.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/JPlagClient.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/CoMoToOption.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/CoMoToOption.java" />
     </list>
     <ignored path="JPlagClient.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -100,67 +105,59 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ExampleClient.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/ExampleClient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="907" column="41" selection-start="34208" selection-end="34240" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UIUCLDAPDownloader.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/LDAP/UIUCLDAPDownloader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="106" column="43" selection-start="4289" selection-end="4289" vertical-scroll-proportion="0.93520516">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="StudentData.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/LDAP/StudentData.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="56" column="26" selection-start="2146" selection-end="2146" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JPlagClient.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/JPlagClient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="86" column="40" selection-start="3215" selection-end="3215" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#parseArgs#0;class#JPlagClient#0" expanded="false" />
-                <element signature="method#verifyFilePath#0;class#JPlagClient#0" expanded="false" />
-                <element signature="method#printUsage#0;class#JPlagClient#0" expanded="false" />
-                <element signature="method#optionUsage#0;class#JPlagClient#0" expanded="false" />
-                <element signature="method#printLanguageHelp#0;class#JPlagClient#0" expanded="false" />
-                <element signature="method#printLocaleHelp#0;class#JPlagClient#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClientUtil.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/ClientUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="67" selection-start="2731" selection-end="2731" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JPlagService_Impl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagService_Impl.java">
+      <file leaf-file-name="ExampleClient.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/ExampleClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="70" column="13" selection-start="3335" selection-end="3335" vertical-scroll-proportion="0.0">
+            <state line="276" column="0" selection-start="9302" selection-end="9933" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JPlagClient.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/JPlagClient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="397" column="50" selection-start="16855" selection-end="16855" vertical-scroll-proportion="0.10714286">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NonRecursiveFilenameFilter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/NonRecursiveFilenameFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="60" column="52" selection-start="2413" selection-end="2413" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RecursiveFilenameFilter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/RecursiveFilenameFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="51" column="0" selection-start="2055" selection-end="2182" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CoMoToOption.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/CoMoToOption.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="185" column="10" selection-start="4730" selection-end="4730" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -264,22 +261,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/example/HelloWorldClient.java" />
-        <option value="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/JPlagClientAccessHandler.java" />
         <option value="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/wscompileSSLLauncher.java" />
         <option value="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/ZipUtil.java" />
         <option value="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/FinishRequestData.java" />
         <option value="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/ExampleConnect.java" />
         <option value="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/FinishRequestData_LiteralSerializer.java" />
         <option value="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagService_Impl.java" />
-        <option value="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/ExampleClient.java" />
-        <option value="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/CoMoToOption.java" />
         <option value="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/ExceptionUtil.java" />
         <option value="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/ClientUtil.java" />
-        <option value="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/JPlagClient.java" />
         <option value="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/LDAP/StudentData.java" />
         <option value="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/LDAP/UIUCNetidDownloader.java" />
         <option value="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/LDAP/UIUCLDAPDownloader.java" />
+        <option value="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/ExampleClient.java" />
+        <option value="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/CoMoToOption.java" />
+        <option value="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/RecursiveFilenameFilter.java" />
+        <option value="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/NonRecursiveFilenameFilter.java" />
+        <option value="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/JPlagClient.java" />
       </list>
     </option>
   </component>
@@ -316,8 +313,20 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Favorites" />
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JPlagClient" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JPlagClient" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -349,6 +358,20 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JPlagClient" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JPlagClient" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="jplag" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
@@ -372,34 +395,63 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="LDAP" />
+              <option name="myItemId" value="util" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Favorites" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="GenerateAntBuildDialog.generateIdeaHomeProperty" value="false" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="GenerateAntBuildDialog.generateSingleFile" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="options.lastSelected" value="fileTemplates" />
+    <property name="GenerateAntBuildDialog.inclineRuntiemClasspath" value="false" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RunManager" selected="Application.UIUCLDAPDownloader">
+    <configuration default="false" name="UIUCLDAPDownloader" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false">
+        <pattern>
+          <option name="PATTERN" value="edu.illinois.cs.comoto.jplag.LDAP.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="edu.illinois.cs.comoto.jplag.LDAP.UIUCLDAPDownloader" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="JPlagClient" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <configuration default="false" name="ExampleConnect" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -469,28 +521,6 @@
       </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="UIUCLDAPDownloader" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false">
-        <pattern>
-          <option name="PATTERN" value="edu.illinois.cs.comoto.jplag.LDAP.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="edu.illinois.cs.comoto.jplag.LDAP.UIUCLDAPDownloader" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="JPlagClient" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -658,10 +688,10 @@
       </method>
     </configuration>
     <list size="4">
-      <item index="0" class="java.lang.String" itemvalue="Application.ExampleConnect" />
-      <item index="1" class="java.lang.String" itemvalue="Application.ExampleClient" />
-      <item index="2" class="java.lang.String" itemvalue="Application.JPlagClient" />
-      <item index="3" class="java.lang.String" itemvalue="Application.UIUCNetidDownloader" />
+      <item index="0" class="java.lang.String" itemvalue="Application.UIUCLDAPDownloader" />
+      <item index="1" class="java.lang.String" itemvalue="Application.ExampleConnect" />
+      <item index="2" class="java.lang.String" itemvalue="Application.ExampleClient" />
+      <item index="3" class="java.lang.String" itemvalue="Application.JPlagClient" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -718,7 +748,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2857143" sideWeight="0.625" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.375" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.375" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Cycles" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -768,120 +798,97 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/ExampleConnect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="23" selection-start="2986" selection-end="2986" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_Stub.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="4" selection-start="2822" selection-end="2822" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/FinishRequestData_LiteralSerializer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="31" selection-start="5670" selection-end="5670" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="94" column="31" selection-start="5670" selection-end="5670" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/Option.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="34" selection-start="2478" selection-end="2478" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="57" column="34" selection-start="2478" selection-end="2478" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/CoMoToOption.java">
+    <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/LDAP/UIUCLDAPDownloader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="0" selection-start="1895" selection-end="1895" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="106" column="43" selection-start="4279" selection-end="4279" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/ClientUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="67" selection-start="2731" selection-end="2731" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="66" column="67" selection-start="2731" selection-end="2731" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagService_Impl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="13" selection-start="3335" selection-end="3335" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="70" column="13" selection-start="3335" selection-end="3335" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/FinishRequestData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="38" selection-start="2438" selection-end="2438" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="56" column="38" selection-start="2438" selection-end="2438" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/JPlagClientAccessHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="21" selection-start="1884" selection-end="1926" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="55" column="21" selection-start="1884" selection-end="1926" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/wscompileSSLLauncher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="29" selection-start="2072" selection-end="2072" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="50" column="29" selection-start="2072" selection-end="2072" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/ZipUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="42" selection-start="1793" selection-end="1793" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="40" column="42" selection-start="1793" selection-end="1793" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/JPlagClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="40" selection-start="3215" selection-end="3215" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#parseArgs#0;class#JPlagClient#0" expanded="false" />
-            <element signature="method#verifyFilePath#0;class#JPlagClient#0" expanded="false" />
-            <element signature="method#printUsage#0;class#JPlagClient#0" expanded="false" />
-            <element signature="method#optionUsage#0;class#JPlagClient#0" expanded="false" />
-            <element signature="method#printLanguageHelp#0;class#JPlagClient#0" expanded="false" />
-            <element signature="method#printLocaleHelp#0;class#JPlagClient#0" expanded="false" />
-          </folding>
-        </state>
+    <entry file="file://$PROJECT_DIR$/archive_projects/example_client.jarprj">
+      <provider selected="true" editor-type-id="jarprj">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/ExampleClient.java">
+    <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/CoMoToOption.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="907" column="41" selection-start="34208" selection-end="34240" vertical-scroll-proportion="0.0">
+        <state line="185" column="10" selection-start="4730" selection-end="4730" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/LDAP/StudentData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="26" selection-start="2146" selection-end="2146" vertical-scroll-proportion="0.0">
+        <state line="56" column="26" selection-start="2146" selection-end="2146" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/RecursiveFilenameFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="0" selection-start="2055" selection-end="2182" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/LDAP/UIUCLDAPDownloader.java">
+    <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/NonRecursiveFilenameFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="43" selection-start="4289" selection-end="4289" vertical-scroll-proportion="0.93520516">
+        <state line="60" column="52" selection-start="2413" selection-end="2413" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/ExampleClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="276" column="0" selection-start="9302" selection-end="9933" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/JPlagClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="397" column="50" selection-start="16855" selection-end="16855" vertical-scroll-proportion="0.10714286">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -931,9 +938,23 @@
   </component>
   <component name="masterDetails">
     <states>
-      <state key="Copyright.UI">
+      <state key="ArtifactsStructureConfigurable.UI">
         <settings>
-          <last-edited>Illinois</last-edited>
+          <artifact-editor />
+          <last-edited>JPlagClient:jar</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Android</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -943,13 +964,53 @@
           </splitter-proportions>
         </settings>
       </state>
-      <state key="ScopeChooserConfigurable.UI">
+      <state key="GlobalLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Default</last-edited>
-          <splitter-proportions />
-          <order>
-            <scope name="Default" />
-          </order>
+          <last-edited>Python 2.6.6 (/usr/bin/python2.6) interpreter library</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.6</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>JPlagClient</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Glassfish / JAX-WS 2.X RI / Metro 1.X / JWSDP 2.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
         </settings>
       </state>
     </states>
