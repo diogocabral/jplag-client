@@ -67,6 +67,7 @@
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/jaxrpc-spi.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/jaxrpc-impl.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/jaxrpc-api.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/commons-io-2.0.1.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>

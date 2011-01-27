@@ -37,6 +37,9 @@
 
 package edu.illinois.cs.comoto.jplag;
 
+import edu.illinois.cs.comoto.jplag.LDAP.StudentData;
+import edu.illinois.cs.comoto.jplag.LDAP.UIUCLDAPDownloader;
+import edu.illinois.cs.comoto.jplag.anonymize.FileAnonymizer;
 import edu.illinois.cs.comoto.jplag.util.*;
 import edu.illinois.cs.comoto.jplag.wsdl.*;
 import jargs.gnu.CmdLineParser;
@@ -416,6 +419,12 @@ public class JPlagClient {
 
     private String sendSubmission() {
         Vector<File> submissionFiles = collectFiles();
+
+        if (option.isAnonymize()) {
+            StudentData studentData = new UIUCLDAPDownloader().getStudentData();
+            submissionFiles = new FileAnonymizer(studentData).anonymizeFiles(submissionFiles);
+        }
+
         if (submissionFiles == null) return null;
 
         File zipfile = null;
