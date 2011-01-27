@@ -49,7 +49,7 @@ import java.util.HashSet;
  */
 public class StudentData {
 
-    private HashMap<String, String> netids;
+    private HashMap<String, String> netids, netids_reverse;
     private HashSet<String> firstNames, lastNames;
 
     public StudentData() {
@@ -78,5 +78,13 @@ public class StudentData {
 
     public void setLastNames(HashSet<String> lastNames) {
         this.lastNames = lastNames;
+    }
+
+    public HashMap<String, String> getNetids_reverse() {
+        return netids_reverse;
+    }
+
+    public void setNetids_reverse(HashMap<String, String> netids_reverse) {
+        this.netids_reverse = netids_reverse;
     }
 }

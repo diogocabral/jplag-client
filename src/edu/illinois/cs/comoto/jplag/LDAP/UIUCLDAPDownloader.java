@@ -75,6 +75,7 @@ public class UIUCLDAPDownloader {
     //code adopted from http://download.oracle.com/javase/tutorial/jndi/newstuff/examples/PagedSearch.java
     public StudentData getStudentData() {
         HashMap<String, String> netids = new HashMap<String, String>();
+        HashMap<String, String> netids_reverse = new HashMap<String, String>();
         HashSet<String> firstNames = new HashSet<String>();
         HashSet<String> lastNames = new HashSet<String>();
 
@@ -99,7 +100,10 @@ public class UIUCLDAPDownloader {
                     SearchResult entry = (SearchResult) answer.next();
                     Attributes attrs = entry.getAttributes();
                     try {
-                        netids.put(attrs.get("sAMAccountName").toString(), "student" + count);
+                        String netid = attrs.get("sAMAccountName").toString();
+                        String pseudonym = "student" + count;
+                        netids.put(netid, pseudonym);
+                        netids_reverse.put(pseudonym, netid);
                     } catch (Exception e) {
                     }
                     try {
@@ -144,6 +148,7 @@ public class UIUCLDAPDownloader {
         data.setFirstNames(firstNames);
         data.setLastNames(lastNames);
         data.setNetids(netids);
+        data.setNetids_reverse(netids_reverse);
         return data;
     }
 
