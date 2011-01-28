@@ -2,25 +2,7 @@
 syntax: regexp
 \.db$
 syntax: regexp
-^MossWeb/mossweb/public/moss_analysis$
-syntax: regexp
-^MossWeb/data/sessions$
-syntax: regexp
-^MossWeb/development_mysql\.ini$
-syntax: regexp
-^MossWeb/data$
-syntax: regexp
-^MossWeb/CoMoTo\.egg-info$
-syntax: regexp
-^MossWeb/data$
-syntax: regexp
-^MossWeb/data$
-syntax: regexp
-^MossWeb/data$
-syntax: regexp
-\.tmp.*
-syntax: regexp
-.*\.pyc
+out.*
 syntax: regexp
 .*\.class
 

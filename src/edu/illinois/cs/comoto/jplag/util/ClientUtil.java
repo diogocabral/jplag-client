@@ -41,7 +41,13 @@ import com.sun.xml.rpc.client.ClientTransportException;
 import com.sun.xml.rpc.util.exception.JAXRPCExceptionBase;
 import edu.illinois.cs.comoto.jplag.wsdl.JPlagException;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.rmi.RemoteException;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Properties;
 
 /**
  * Author:  Charlie Meyer <cemeyer2@illinois.edu>
@@ -51,6 +57,45 @@ import java.rmi.RemoteException;
  * Created by IntelliJ IDEA.
  */
 public class ClientUtil {
+
+    private static Properties props;
+
+    public static String getProperty(String key) {
+        if (props == null) {
+            try {
+                List<String> propertiesPaths = new LinkedList<String>();
+                propertiesPaths.add("client.properties");
+                propertiesPaths.add(System.getProperty("user.home") + File.separator + "client.properties");
+                propertiesPaths.add("/etc/jplag/client.properties");
+
+                File propsFile = null;
+
+                for (String path : propertiesPaths) {
+                    File f = new File(path);
+                    if (f.exists()) {
+                        System.out.println("Using configuration from " + path);
+                        propsFile = f;
+                        break;
+                    }
+                }
+                if (propsFile == null) {
+                    System.err.println("Could not find client.properties");
+                    System.exit(1);
+                }
+                props = new Properties();
+                props.load(new FileInputStream(propsFile));
+            } catch (IOException e) {
+                System.err.println("Error loading properties");
+                System.err.println(e.getMessage());
+                System.exit(1);
+            }
+        }
+        String value = props.getProperty(key);
+        if (value == null) {
+            System.err.println("Warning: property: " + key + " not found in configuration file");
+        }
+        return value;
+    }
 
     /**
      * Helper function to easily evaluate web service related exceptions

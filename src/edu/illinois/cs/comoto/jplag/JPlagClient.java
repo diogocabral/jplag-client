@@ -40,6 +40,7 @@ package edu.illinois.cs.comoto.jplag;
 import edu.illinois.cs.comoto.jplag.LDAP.StudentData;
 import edu.illinois.cs.comoto.jplag.LDAP.UIUCLDAPDownloader;
 import edu.illinois.cs.comoto.jplag.anonymize.FileAnonymizer;
+import edu.illinois.cs.comoto.jplag.anonymize.FileDeAnonymizer;
 import edu.illinois.cs.comoto.jplag.util.*;
 import edu.illinois.cs.comoto.jplag.wsdl.*;
 import jargs.gnu.CmdLineParser;
@@ -55,10 +56,7 @@ import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
 import javax.xml.rpc.handler.Handler;
 import javax.xml.rpc.handler.HandlerChain;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.FilenameFilter;
+import java.io.*;
 import java.security.cert.X509Certificate;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -91,6 +89,7 @@ public class JPlagClient {
     private CoMoToOption option;
     private JPlagTyp_Stub stub = null;
     private FilenameFilter subdirFileFilter = null;
+    private StudentData studentData = null;
 
     public JPlagClient(String[] args) {
         run(args);
@@ -173,8 +172,8 @@ public class JPlagClient {
         }
 
         //now get the rest of the arguments
-        String username = (String) parser.getOptionValue(userOption, "cemeyer");
-        String password = (String) parser.getOptionValue(passOption, "comoto");
+        String username = (String) parser.getOptionValue(userOption, ClientUtil.getProperty("jplag.username"));
+        String password = (String) parser.getOptionValue(passOption, ClientUtil.getProperty("jplag.password"));
         String language = (String) parser.getOptionValue(languageOption, "text");
         String sourceDir = verifyFilePath((String) parser.getOptionValue(sourceOption, "."), false);
         boolean subdirs = ((Boolean) parser.getOptionValue(subdirsOption, new Boolean(false))).booleanValue();
@@ -188,7 +187,13 @@ public class JPlagClient {
         if (baseDir.equals("")) {
             baseDir = null;
         }
-        String destDir = verifyFilePath((String) parser.getOptionValue(destOption, "result/"), true);
+        String destDefault = ".";
+        try {
+            destDefault = new File(".").getCanonicalPath() + File.separator + "result" + File.separator;
+        } catch (IOException ioe) {
+            //ignore silently
+        }
+        String destDir = verifyFilePath((String) parser.getOptionValue(destOption, destDefault), true);
         String title = (String) parser.getOptionValue(titleOption, "CoMoTo JPlag Report");
         String locale = (String) parser.getOptionValue(localeOption, "en");
         boolean anonymize = ((Boolean) parser.getOptionValue(anonymizeOption, new Boolean(false))).booleanValue();
@@ -215,7 +220,11 @@ public class JPlagClient {
     private String verifyFilePath(String path, boolean create) {
         File f = new File(path);
         if (!f.exists() && create) {
-            f.mkdir();
+            boolean success = f.mkdir();
+            if (!success) {
+                System.err.println("Error: Could not create directory: " + path);
+                System.exit(1);
+            }
         }
         if (!f.exists()) {
             System.err.println("Supplied path " + path + " does not exist!");
@@ -237,8 +246,8 @@ public class JPlagClient {
         System.err.println("");
         System.err.println("Valid Options:");
         System.err.println("");
-        optionUsage("-u <username>  --user <username>", "Sets the username. Default: CoMoTo account.");
-        optionUsage("-p <password>  --pass <password>", "Sets the password. Default: CoMoTo account.");
+        optionUsage("-u <username>  --user <username>", "Sets the username. Default: from configuration file");
+        optionUsage("-p <password>  --pass <password>", "Sets the password. Default: from configuration file");
         optionUsage("-l <language>  --language <language>", "Sets the programming language.\nUse -l ? or --language ? for supported and default languages.");
         optionUsage("-s <dir>  --source <dir>", "Sets the directory where source code is located. Default is cwd.");
         optionUsage("--subdirs", "Recursively scan subdirectories as well for source code files. Default is disabled.");
@@ -421,7 +430,7 @@ public class JPlagClient {
         Vector<File> submissionFiles = collectFiles();
 
         if (option.isAnonymize()) {
-            StudentData studentData = new UIUCLDAPDownloader().getStudentData();
+            studentData = new UIUCLDAPDownloader().getStudentData();
             submissionFiles = new FileAnonymizer(studentData).anonymizeFiles(submissionFiles);
         }
 
@@ -513,15 +522,22 @@ public class JPlagClient {
             while (true) {
                 status = stub.getStatus(submissionID);
 
-                /*
-                 * Here you could print out more details about the status of
-                 * the submission, but it's left out here...
-                 */
+                if (status.getState() == JPLAG_INQUEUE) {
+                    System.out.println("Submission in queue");
+                } else if (status.getState() == JPLAG_PARSING) {
+                    System.out.println("Parsing files");
+                } else if (status.getState() == JPLAG_COMPARING) {
+                    System.out.println("Comparing files");
+                } else if (status.getState() == JPLAG_GENRESULT) {
+                    System.out.println("Generating result");
+                } else if (status.getState() == JPLAG_PACKRESULT) {
+                    System.out.println("Packing result");
+                }
 
                 if (status.getState() >= JPLAG_DONE) {
                     break;
                 }
-                Thread.sleep(10000);    // wait 10 seconds
+                Thread.sleep(3000);
             }
             if (status.getState() >= JPLAG_ERROR) {
                 /*
@@ -546,25 +562,15 @@ public class JPlagClient {
 
         try {
             File resultDir = new File(option.getDestDir());
-            if (!resultDir.exists()) {
-                resultDir.mkdirs();
-            }
+            if (!resultDir.exists()) resultDir.mkdirs();
             zipfile = File.createTempFile("jplagtmpresult", ".zip");
 
+            MimeMultipart resultMultipart = stub.getResult(submissionID);
+
+            MimeBodyPart bdp = (MimeBodyPart) resultMultipart.getBodyPart(0);
+            DataHandler dh = bdp.getDataHandler();
             output = new FileOutputStream(zipfile);
-
-            StartResultDownloadData srdd = stub.startResultDownload(submissionID);
-
-            int filesize = srdd.getFilesize();
-            int loadedsize = srdd.getData().length;
-
-            output.write(srdd.getData());
-
-            while (loadedsize < filesize) {
-                byte[] data = stub.continueResultDownload(0);
-                output.write(data);
-                loadedsize += data.length;
-            }
+            dh.writeTo(output);
             output.close();
 
             /*
@@ -573,6 +579,15 @@ public class JPlagClient {
 
             ZipUtil.unzip(zipfile, resultDir);
             zipfile.delete();
+
+            /*
+             * Result successfully downloaded and unzipped,
+             * so remove it from server now
+             */
+            stub.cancelSubmission(submissionID);
+            if (option.isAnonymize()) {
+                new FileDeAnonymizer(studentData).deanonymizeFiles(resultDir);
+            }
         } catch (Exception e) {
             if (output != null) {
                 try {
@@ -580,11 +595,9 @@ public class JPlagClient {
                 } catch (Exception ex) {
                 }
             }
-            if (zipfile != null) {
-                zipfile.delete();
-            }
+            if (zipfile != null) zipfile.delete();
             ClientUtil.checkException(e);
-            System.exit(1);
+            return false;
         }
 
         return true;

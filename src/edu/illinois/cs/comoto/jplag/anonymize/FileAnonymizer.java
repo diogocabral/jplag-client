@@ -89,7 +89,12 @@ public class FileAnonymizer {
         try {
             String inputPath = inputFile.getCanonicalPath();
             String retval = inputPath.substring(baseDir.length());
-            String netid = retval.substring(0, retval.indexOf(File.separator));
+            int marker = retval.indexOf(File.separator);
+            int marker2 = retval.indexOf("_");
+            if (marker2 != -1 && marker2 < marker) {
+                marker = marker2;
+            }
+            String netid = retval.substring(0, marker);
             String pseudonym = studentData.getNetids().get(netid);
             if (pseudonym != null) {
                 retval = retval.replace(netid, pseudonym);
@@ -220,13 +225,13 @@ public class FileAnonymizer {
             tempDir.mkdir();
         }
 
-//        tempDir.deleteOnExit();
+        tempDir.deleteOnExit();
 
-        try {
-            System.out.println("temp dir: " + tempDir.getCanonicalPath());
-        } catch (IOException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        }
+//        try {
+//            System.out.println("temp dir: " + tempDir.getCanonicalPath());
+//        } catch (IOException e) {
+//            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+//        }
 
         return tempDir;
     }

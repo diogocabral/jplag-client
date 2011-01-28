@@ -37,6 +37,8 @@
 
 package edu.illinois.cs.comoto.jplag.LDAP;
 
+import edu.illinois.cs.comoto.jplag.util.ClientUtil;
+
 import javax.naming.Context;
 import javax.naming.NamingEnumeration;
 import javax.naming.NamingException;
@@ -93,7 +95,7 @@ public class UIUCLDAPDownloader {
             System.exit(1);
         }
         try {
-            int count = 0;
+            int count = Integer.MAX_VALUE - 1;
             do {
                 NamingEnumeration answer = ctx.search("OU=Campus Accounts,DC=ad,DC=uiuc,DC=edu", "cn=*", ctls);
 
@@ -117,7 +119,7 @@ public class UIUCLDAPDownloader {
                         lastNames.add(lastName);
                     } catch (Exception e) {
                     }
-                    count++;
+                    count--;
                 }
                 Control[] controls = ctx.getResponseControls();
                 if (controls != null) {
@@ -161,9 +163,8 @@ public class UIUCLDAPDownloader {
             env.put(Context.INITIAL_CONTEXT_FACTORY, "com.sun.jndi.ldap.LdapCtxFactory");
             env.put(Context.PROVIDER_URL, "ldaps://ad.uiuc.edu:636");
             env.put(Context.SECURITY_AUTHENTICATION, "simple");
-            //the following two lines need to be moved out to a config/properties file
-            env.put(Context.SECURITY_PRINCIPAL, "CN=svc-comoto,OU=Research Service Accounts,OU=CSUsers,OU=CS,DC=ad,DC=uiuc,DC=edu");
-            env.put(Context.SECURITY_CREDENTIALS, "mdtp99axheh");
+            env.put(Context.SECURITY_PRINCIPAL, ClientUtil.getProperty("ldap.username"));
+            env.put(Context.SECURITY_CREDENTIALS, ClientUtil.getProperty("ldap.password"));
             return new InitialLdapContext(env, null);
         } catch (NamingException ne) {
             System.err.println("Error initializing LDAP context");
