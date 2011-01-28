@@ -100,9 +100,18 @@
                     <include name="**/*.jar"/>
                 </fileset>
             </externalclasses>
-            <rename mainclass="edu.illinois.cs.comoto.jplag.JPlagClient" logfile="yguard.log">
+            <rename mainclass="edu.illinois.cs.comoto.jplag.JPlagClient" logfile="obfuscatelog.xml">
                 <property name="error-checking" value="pedantic"/>
             </rename>
+            <shrink
+                    logfile="shrinklog.xml">
+                <keep>
+                    <class classes="protected"
+                           methods="protected"
+                           fields="protected"/>
+                </keep>
+            </shrink>
+
         </yguard>
         <delete file="dist/JPlagClient-orig.jar"/>
 
@@ -124,8 +133,10 @@
     </target>
 
     <target name="clean">
-        <antcall target="clean-private"/>
         <delete dir="dist"/>
+        <delete file="obfuscatelog.xml"/>
+        <delete file="shrinklog.xml"/>
+        <antcall target="clean-private"/>
     </target>
 
 </project>
