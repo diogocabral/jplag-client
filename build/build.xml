@@ -35,7 +35,7 @@
   ~ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS WITH THE SOFTWARE.
   -->
 
-<project name="JPlagClient" default="yguard">
+<project name="JPlagClient" default="dist">
     <description>
         JPlag Client BuildFile
     </description>
@@ -105,6 +105,16 @@
             </rename>
         </yguard>
         <delete file="dist/JPlagClient-orig.jar"/>
+
+    </target>
+
+    <target name="dist" depends="yguard">
+        <copy todir="dist">
+            <fileset dir="bin/"/>
+        </copy>
+        <chmod perm="755">
+            <fileset dir="dist/"/>
+        </chmod>
         <antcall target="clean-private"/>
     </target>
 

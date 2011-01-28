@@ -43,8 +43,6 @@ import edu.illinois.cs.comoto.jplag.anonymize.FileAnonymizer;
 import edu.illinois.cs.comoto.jplag.anonymize.FileDeAnonymizer;
 import edu.illinois.cs.comoto.jplag.util.*;
 import edu.illinois.cs.comoto.jplag.wsdl.*;
-import jargs.gnu.CmdLineParser;
-import jargs.gnu.CmdLineParser.OptionException;
 
 import javax.activation.DataHandler;
 import javax.activation.FileDataSource;
@@ -139,7 +137,8 @@ public class JPlagClient {
 
         CmdLineParser.Option userOption = parser.addStringOption('u', "user");
         CmdLineParser.Option passOption = parser.addStringOption('p', "pass");
-        CmdLineParser.Option languageOption = parser.addStringOption('l', "language");
+//        CmdLineParser.Option languageOption = parser.addStringOption('l', "language");
+        CmdLineParser.Option languageOption = parser.addOption(new NullStringAllowingStringOption('l', "language"));
         CmdLineParser.Option sourceOption = parser.addStringOption('s', "source");
         CmdLineParser.Option subdirsOption = parser.addBooleanOption("subdirs");
         CmdLineParser.Option extensionsOption = parser.addStringOption('e', "extensions");
@@ -148,7 +147,8 @@ public class JPlagClient {
         CmdLineParser.Option baseOption = parser.addStringOption('b', "base");
         CmdLineParser.Option destOption = parser.addStringOption('d', "destination");
         CmdLineParser.Option titleOption = parser.addStringOption("title");
-        CmdLineParser.Option localeOption = parser.addStringOption("locale");
+//        CmdLineParser.Option localeOption = parser.addStringOption("locale");
+        CmdLineParser.Option localeOption = parser.addOption(new NullStringAllowingStringOption("locale"));
         CmdLineParser.Option helpOption1 = parser.addBooleanOption('h', "help");
         CmdLineParser.Option helpOption2 = parser.addBooleanOption('?', "?");
         CmdLineParser.Option anonymizeOption = parser.addBooleanOption('a', "anonymize");
@@ -156,7 +156,7 @@ public class JPlagClient {
 
         try {
             parser.parse(args);
-        } catch (OptionException e) {
+        } catch (CmdLineParser.OptionException e) {
             System.err.println(e.getMessage());
             printUsage();
             System.exit(2);

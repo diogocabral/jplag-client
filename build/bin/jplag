@@ -1,0 +1,5 @@
+#!/bin/bash
+
+JAVA=`which java`
+
+$JAVA -jar JPlagClient.jar $@
