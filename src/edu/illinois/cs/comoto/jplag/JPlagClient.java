@@ -163,8 +163,8 @@ public class JPlagClient {
         }
 
         //first check for help
-        boolean help1 = ((Boolean) parser.getOptionValue(helpOption1, new Boolean(false))).booleanValue();
-        boolean help2 = ((Boolean) parser.getOptionValue(helpOption2, new Boolean(false))).booleanValue();
+        boolean help1 = ((Boolean) parser.getOptionValue(helpOption1, Boolean.FALSE)).booleanValue();
+        boolean help2 = ((Boolean) parser.getOptionValue(helpOption2, Boolean.FALSE)).booleanValue();
 
         if (help1 || help2) {
             printUsage();
@@ -176,12 +176,12 @@ public class JPlagClient {
         String password = (String) parser.getOptionValue(passOption, ClientUtil.getProperty("jplag.password"));
         String language = (String) parser.getOptionValue(languageOption, "text");
         String sourceDir = verifyFilePath((String) parser.getOptionValue(sourceOption, "."), false);
-        boolean subdirs = ((Boolean) parser.getOptionValue(subdirsOption, new Boolean(false))).booleanValue();
+        boolean subdirs = ((Boolean) parser.getOptionValue(subdirsOption, Boolean.FALSE)).booleanValue();
         String[] extensions = ((String) parser.getOptionValue(extensionsOption, "")).split(",");
         if (extensions[0].equals("")) {
             extensions = null;
         }
-        int tokens = ((Integer) parser.getOptionValue(tokensOption, new Integer(-1))).intValue();
+        int tokens = ((Integer) parser.getOptionValue(tokensOption, Integer.valueOf(-1))).intValue();
         String matches = (String) parser.getOptionValue(matchesOption, "20");
         String baseDir = (String) parser.getOptionValue(baseOption, "");
         if (baseDir.equals("")) {
@@ -196,10 +196,17 @@ public class JPlagClient {
         String destDir = verifyFilePath((String) parser.getOptionValue(destOption, destDefault), true);
         String title = (String) parser.getOptionValue(titleOption, "CoMoTo JPlag Report");
         String locale = (String) parser.getOptionValue(localeOption, "en");
-        boolean anonymize = ((Boolean) parser.getOptionValue(anonymizeOption, new Boolean(false))).booleanValue();
+        boolean anonymize = ((Boolean) parser.getOptionValue(anonymizeOption, Boolean.FALSE)).booleanValue();
         String cluster = (String) parser.getOptionValue(clusterOption, "none");
 
-
+        if(!sourceDir.startsWith("/")) {
+            try {
+                sourceDir = new File(".").getCanonicalPath()+File.separator+sourceDir;
+            } catch (IOException e) {
+                ClientUtil.checkException(e);
+                System.exit(1);
+            }
+        }
         option = new CoMoToOption();
         option.setUsername(username);
         option.setPassword(password);
@@ -239,7 +246,7 @@ public class JPlagClient {
 
     private void printUsage() {
         System.err.println("UIUC JPlag Client");
-        System.err.println("Developed for the CoMoTo project");
+        System.err.println("Developed for the CoMoTo project by Charlie Meyer <cemeyer2@illinois.edu>");
         System.err.println("");
         System.err.println("Copyright (c) 2011 University of Illinois at Urbana-Champaign. All rights reserved.");
         System.err.println("");

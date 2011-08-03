@@ -58,15 +58,18 @@ import java.util.Properties;
  */
 public class ClientUtil {
 
+    private ClientUtil(){}
+
     private static Properties props;
 
     public static String getProperty(String key) {
         if (props == null) {
             try {
+                String propFileName = "jplag.properties";
                 List<String> propertiesPaths = new LinkedList<String>();
-                propertiesPaths.add("client.properties");
-                propertiesPaths.add(System.getProperty("user.home") + File.separator + "client.properties");
-                propertiesPaths.add("/etc/jplag/client.properties");
+                propertiesPaths.add(propFileName);
+                propertiesPaths.add(System.getProperty("user.home") + File.separator + propFileName);
+                propertiesPaths.add("/etc/jplag/"+propFileName);
 
                 File propsFile = null;
 
@@ -79,8 +82,14 @@ public class ClientUtil {
                     }
                 }
                 if (propsFile == null) {
-                    System.err.println("Could not find client.properties");
-                    System.exit(1);
+                    System.out.println("Warning: could not find configuration file");
+                    String paths = "";
+                    for(String path : propertiesPaths) {
+                        paths+=new File(path).getCanonicalPath()+":";
+                    }
+                    paths = paths.substring(0, paths.length()-1);
+                    System.out.println("Searched paths: "+paths);
+                    return "";
                 }
                 props = new Properties();
                 props.load(new FileInputStream(propsFile));

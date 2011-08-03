@@ -1,5 +1,6 @@
 #!/bin/bash
 
 JAVA=`which java`
+DIR="$( cd "$( dirname "$0" )" && pwd )"
 
-$JAVA -jar JPlagClient.jar $@
+$JAVA -jar $DIR/JPlagClient.jar $@

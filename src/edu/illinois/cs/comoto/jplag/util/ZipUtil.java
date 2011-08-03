@@ -49,6 +49,10 @@ import java.util.zip.ZipFile;
 import java.util.zip.ZipOutputStream;
 
 public class ZipUtil {
+
+    private ZipUtil(){}
+
+
     /**
      * Zips the given directory "dir" into a zip file in "dest"
      *

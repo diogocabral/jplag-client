@@ -523,7 +523,7 @@ public class CmdLineParser {
                 }
                 String valueArg = null;
                 if (curArg.startsWith("--")) { // handle --arg=value
-                    int equalsPos = curArg.indexOf("=");
+                    int equalsPos = curArg.indexOf('=');
                     if (equalsPos != -1) {
                         valueArg = curArg.substring(equalsPos + 1);
                         curArg = curArg.substring(0, equalsPos);

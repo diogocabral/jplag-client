@@ -53,7 +53,7 @@ import java.util.Vector;
  */
 public class FileAnonymizer {
 
-    Vector<File> files;
+
     StudentData studentData;
 
     public FileAnonymizer(StudentData data) {
@@ -90,7 +90,7 @@ public class FileAnonymizer {
             String inputPath = inputFile.getCanonicalPath();
             String retval = inputPath.substring(baseDir.length());
             int marker = retval.indexOf(File.separator);
-            int marker2 = retval.indexOf("_");
+            int marker2 = retval.indexOf('_');
             if (marker2 != -1 && marker2 < marker) {
                 marker = marker2;
             }
