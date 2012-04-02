@@ -9,11 +9,112 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81af9ccd-2a23-4324-8fe9-4953996421e6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/bin/jplag" afterPath="$PROJECT_DIR$/build/bin/jplag" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+    <list default="true" id="81af9ccd-2a23-4324-8fe9-4953996421e6" name="Default" comment="updated copyright">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/JPlagClient.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/JPlagClient.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/build.xml" afterPath="$PROJECT_DIR$/build/build.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/ExampleClient.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/ExampleClient.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/ExampleConnect.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/ExampleConnect.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/LDAP/StudentData.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/LDAP/StudentData.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/LDAP/UIUCLDAPDownloader.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/LDAP/UIUCLDAPDownloader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/anonymize/FileAnonymizer.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/anonymize/FileAnonymizer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/anonymize/FileDeAnonymizer.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/anonymize/FileDeAnonymizer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/ClientUtil.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/ClientUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/CmdLineParser.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/CmdLineParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/CoMoToOption.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/CoMoToOption.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/JPlagClientAccessHandler.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/JPlagClientAccessHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/NonRecursiveFilenameFilter.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/NonRecursiveFilenameFilter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/NullStringAllowingStringOption.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/NullStringAllowingStringOption.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/RecursiveFilenameFilter.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/RecursiveFilenameFilter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/ZipUtil.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/ZipUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/wscompileSSLLauncher.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/wscompileSSLLauncher.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/FinishRequestData.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/FinishRequestData.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/FinishRequestData_LiteralSerializer.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/FinishRequestData_LiteralSerializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagException.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagException_LiteralSerializer.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagException_LiteralSerializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagService.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagService_Impl.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagService_Impl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagService_SerializerRegistry.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagService_SerializerRegistry.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_Stub.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_Stub.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_cancelSubmission_Fault_SOAPBuilder.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_cancelSubmission_Fault_SOAPBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_cancelSubmission_Fault_SOAPSerializer.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_cancelSubmission_Fault_SOAPSerializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_compareSource_Fault_SOAPBuilder.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_compareSource_Fault_SOAPBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_compareSource_Fault_SOAPSerializer.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_compareSource_Fault_SOAPSerializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_continueResultDownload_Fault_SOAPBuilder.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_continueResultDownload_Fault_SOAPBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_continueResultDownload_Fault_SOAPSerializer.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_continueResultDownload_Fault_SOAPSerializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_continueSubmissionUpload_Fault_SOAPBuilder.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_continueSubmissionUpload_Fault_SOAPBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_continueSubmissionUpload_Fault_SOAPSerializer.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_continueSubmissionUpload_Fault_SOAPSerializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_extendAccount_Fault_SOAPBuilder.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_extendAccount_Fault_SOAPBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_extendAccount_Fault_SOAPSerializer.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_extendAccount_Fault_SOAPSerializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_finishAccountRequest_Fault_SOAPBuilder.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_finishAccountRequest_Fault_SOAPBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_finishAccountRequest_Fault_SOAPSerializer.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_finishAccountRequest_Fault_SOAPSerializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_getAccountRequests_Fault_SOAPBuilder.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_getAccountRequests_Fault_SOAPBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_getAccountRequests_Fault_SOAPSerializer.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_getAccountRequests_Fault_SOAPSerializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_getMailTemplates_Fault_SOAPBuilder.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_getMailTemplates_Fault_SOAPBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_getMailTemplates_Fault_SOAPSerializer.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_getMailTemplates_Fault_SOAPSerializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_getResult_Fault_SOAPBuilder.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_getResult_Fault_SOAPBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_getResult_Fault_SOAPSerializer.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_getResult_Fault_SOAPSerializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_getServerInfo_Fault_SOAPBuilder.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_getServerInfo_Fault_SOAPBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_getServerInfo_Fault_SOAPSerializer.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_getServerInfo_Fault_SOAPSerializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_getStatus_Fault_SOAPBuilder.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_getStatus_Fault_SOAPBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_getStatus_Fault_SOAPSerializer.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_getStatus_Fault_SOAPSerializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_getUserDataArray_Fault_SOAPBuilder.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_getUserDataArray_Fault_SOAPBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_getUserDataArray_Fault_SOAPSerializer.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_getUserDataArray_Fault_SOAPSerializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_notifyDevelopers_Fault_SOAPBuilder.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_notifyDevelopers_Fault_SOAPBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_notifyDevelopers_Fault_SOAPSerializer.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_notifyDevelopers_Fault_SOAPSerializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_requestAccount_Fault_SOAPBuilder.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_requestAccount_Fault_SOAPBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_requestAccount_Fault_SOAPSerializer.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_requestAccount_Fault_SOAPSerializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_setDeveloperState_Fault_SOAPBuilder.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_setDeveloperState_Fault_SOAPBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_setDeveloperState_Fault_SOAPSerializer.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_setDeveloperState_Fault_SOAPSerializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_setMailTemplate_Fault_SOAPBuilder.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_setMailTemplate_Fault_SOAPBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_setMailTemplate_Fault_SOAPSerializer.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_setMailTemplate_Fault_SOAPSerializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_setUserData_Fault_SOAPBuilder.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_setUserData_Fault_SOAPBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_setUserData_Fault_SOAPSerializer.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_setUserData_Fault_SOAPSerializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_startResultDownload_Fault_SOAPBuilder.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_startResultDownload_Fault_SOAPBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_startResultDownload_Fault_SOAPSerializer.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_startResultDownload_Fault_SOAPSerializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_startSubmissionUpload_Fault_SOAPBuilder.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_startSubmissionUpload_Fault_SOAPBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_startSubmissionUpload_Fault_SOAPSerializer.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_startSubmissionUpload_Fault_SOAPSerializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_updateUserInfo_Fault_SOAPBuilder.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_updateUserInfo_Fault_SOAPBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_updateUserInfo_Fault_SOAPSerializer.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/JPlagTyp_updateUserInfo_Fault_SOAPSerializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/LanguageInfo.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/LanguageInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/LanguageInfo_LiteralSerializer.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/LanguageInfo_LiteralSerializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/MailTemplate.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/MailTemplate.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/MailTemplateArray.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/MailTemplateArray.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/MailTemplateArray_LiteralSerializer.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/MailTemplateArray_LiteralSerializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/MailTemplate_LiteralSerializer.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/MailTemplate_LiteralSerializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/NotifyDevelopersParams.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/NotifyDevelopersParams.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/NotifyDevelopersParams_LiteralSerializer.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/NotifyDevelopersParams_LiteralSerializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/Option.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/Option.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/Option_LiteralSerializer.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/Option_LiteralSerializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/RequestData.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/RequestData.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/RequestDataArray.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/RequestDataArray.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/RequestDataArray_LiteralSerializer.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/RequestDataArray_LiteralSerializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/RequestData_LiteralSerializer.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/RequestData_LiteralSerializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/ServerInfo.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/ServerInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/ServerInfo_LiteralSerializer.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/ServerInfo_LiteralSerializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/SetDeveloperStateParams.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/SetDeveloperStateParams.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/SetDeveloperStateParams_LiteralSerializer.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/SetDeveloperStateParams_LiteralSerializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/SetMailTemplateParams.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/SetMailTemplateParams.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/SetMailTemplateParams_LiteralSerializer.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/SetMailTemplateParams_LiteralSerializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/SetUserDataParams.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/SetUserDataParams.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/SetUserDataParams_LiteralSerializer.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/SetUserDataParams_LiteralSerializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/StartResultDownloadData.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/StartResultDownloadData.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/StartResultDownloadData_LiteralSerializer.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/StartResultDownloadData_LiteralSerializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/StartSubmissionUploadParams.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/StartSubmissionUploadParams.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/StartSubmissionUploadParams_LiteralSerializer.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/StartSubmissionUploadParams_LiteralSerializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/Status.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/Status.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/Status_LiteralSerializer.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/Status_LiteralSerializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/Submission.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/Submission.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/Submission_LiteralSerializer.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/Submission_LiteralSerializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/UpdateUserInfoParams.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/UpdateUserInfoParams.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/UpdateUserInfoParams_LiteralSerializer.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/UpdateUserInfoParams_LiteralSerializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/UserData.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/UserData.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/UserDataArray.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/UserDataArray.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/UserDataArray_LiteralSerializer.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/UserDataArray_LiteralSerializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/UserData_LiteralSerializer.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/UserData_LiteralSerializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/UserInfo.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/UserInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/UserInfo_LiteralSerializer.java" afterPath="$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/UserInfo_LiteralSerializer.java" />
     </list>
     <ignored path="JPlagClient.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -84,7 +185,7 @@
       <file leaf-file-name="UIUCLDAPDownloader.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/LDAP/UIUCLDAPDownloader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="147" column="73" selection-start="6147" selection-end="6147" vertical-scroll-proportion="0.0">
+            <state line="147" column="66" selection-start="6204" selection-end="6204" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -93,7 +194,7 @@
       <file leaf-file-name="build.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build/build.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="8" selection-start="2317" selection-end="2317" vertical-scroll-proportion="0.0">
+            <state line="60" column="8" selection-start="2371" selection-end="2371" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -102,8 +203,10 @@
       <file leaf-file-name="JPlagClient.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/JPlagClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="252" column="57" selection-start="10276" selection-end="10276" vertical-scroll-proportion="0.47943446">
-              <folding />
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#24811#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -111,7 +214,7 @@
       <file leaf-file-name="FileAnonymizer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/anonymize/FileAnonymizer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="77" column="35" selection-start="2946" selection-end="2946" vertical-scroll-proportion="0.0">
+            <state line="77" column="35" selection-start="3003" selection-end="3003" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -120,7 +223,7 @@
       <file leaf-file-name="CmdLineParser.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/CmdLineParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="525" column="54" selection-start="16755" selection-end="16755" vertical-scroll-proportion="0.0">
+            <state line="525" column="54" selection-start="16812" selection-end="16812" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -129,7 +232,7 @@
       <file leaf-file-name="ClientUtil.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/ClientUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="87" column="24" selection-start="3460" selection-end="3460" vertical-scroll-proportion="0.0">
+            <state line="88" column="24" selection-start="3526" selection-end="3526" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -138,7 +241,7 @@
       <file leaf-file-name="Submission.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/Submission.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="32" selection-start="711" selection-end="711" vertical-scroll-proportion="0.0">
+            <state line="16" column="27" selection-start="711" selection-end="711" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -147,7 +250,7 @@
       <file leaf-file-name="StudentData.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/LDAP/StudentData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="23" selection-start="747" selection-end="747" vertical-scroll-proportion="0.0">
+            <state line="16" column="63" selection-start="747" selection-end="747" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -156,7 +259,7 @@
       <file leaf-file-name="wscompileSSLLauncher.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/wscompileSSLLauncher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="29" selection-start="2072" selection-end="2072" vertical-scroll-proportion="0.0">
+            <state line="50" column="29" selection-start="2129" selection-end="2129" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -165,7 +268,7 @@
       <file leaf-file-name="ZipUtil.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/ZipUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="23" selection-start="2042" selection-end="2042" vertical-scroll-proportion="0.0">
+            <state line="53" column="5" selection-start="2105" selection-end="2105" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -718,11 +821,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32696897" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32959402" sideWeight="0.67261904" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32959402" sideWeight="0.67303103" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25119048" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Regex" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IntelliGuard" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -738,7 +842,6 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32923833" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="APIdoc" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32923833" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32965687" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32738096" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Metrics" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Analysis" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32883435" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -782,7 +885,7 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated build file to shrink compiled jar" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated copyright" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -801,6 +904,7 @@
     <MESSAGE value="got file anonymization complete" />
     <MESSAGE value="adding configuration file template" />
     <MESSAGE value="updated build file to shrink compiled jar" />
+    <MESSAGE value="updated copyright" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -851,56 +955,80 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/LDAP/UIUCLDAPDownloader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="147" column="73" selection-start="6147" selection-end="6147" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/build.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="8" selection-start="2317" selection-end="2317" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/anonymize/FileAnonymizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="35" selection-start="2946" selection-end="2946" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/CmdLineParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="525" column="54" selection-start="16755" selection-end="16755" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/ClientUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="24" selection-start="3460" selection-end="3460" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/Submission.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="32" selection-start="711" selection-end="711" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/LDAP/StudentData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="23" selection-start="747" selection-end="747" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/wscompileSSLLauncher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="29" selection-start="2072" selection-end="2072" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/ZipUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="23" selection-start="2042" selection-end="2042" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/JPlagClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="252" column="57" selection-start="10276" selection-end="10276" vertical-scroll-proportion="0.47943446">
+        <state line="147" column="66" selection-start="6204" selection-end="6204" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/build/build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="8" selection-start="2371" selection-end="2371" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/anonymize/FileAnonymizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="35" selection-start="3003" selection-end="3003" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/CmdLineParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="525" column="54" selection-start="16812" selection-end="16812" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/ClientUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="88" column="24" selection-start="3526" selection-end="3526" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/wsdl/Submission.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="27" selection-start="711" selection-end="711" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/LDAP/StudentData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="63" selection-start="747" selection-end="747" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/wscompileSSLLauncher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="29" selection-start="2129" selection-end="2129" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/util/ZipUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="5" selection-start="2105" selection-end="2105" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/illinois/cs/comoto/jplag/JPlagClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#24811#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="hg4idea.settings">
+    <option name="myCheckIncoming" value="false" />
+    <option name="myCheckOutgoing" value="false" />
   </component>
   <component name="ideajad">
     <property name="annotate" value="false" />
