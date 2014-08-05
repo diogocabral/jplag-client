@@ -53,7 +53,7 @@ import java.util.ArrayList;
 
 public class UserDataArray_LiteralSerializer extends LiteralObjectSerializerBase implements Initializable {
     private static final javax.xml.namespace.QName ns1_items_QNAME = new QName("", "items");
-    private static final javax.xml.namespace.QName ns3_UserData_TYPE_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "UserData");
+    private static final javax.xml.namespace.QName ns3_UserData_TYPE_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "UserData");
     private CombinedSerializer ns3_myUserData_LiteralSerializer;
 
     public UserDataArray_LiteralSerializer(javax.xml.namespace.QName type, java.lang.String encodingStyle) {

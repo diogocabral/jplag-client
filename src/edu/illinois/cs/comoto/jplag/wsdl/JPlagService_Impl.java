@@ -51,8 +51,8 @@ import javax.xml.rpc.JAXRPCException;
 import javax.xml.rpc.handler.HandlerInfo;
 
 public class JPlagService_Impl extends com.sun.xml.rpc.client.BasicService implements JPlagService {
-    private static final QName serviceName = new QName("http://www.ipd.uni-karlsruhe.de/jplag", "JPlagService");
-    private static final QName ns1_JPlagServicePort_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag", "JPlagServicePort");
+    private static final QName serviceName = new QName("http://jplag.ipd.kit.edu/JPlagService", "JPlagService");
+    private static final QName ns1_JPlagServicePort_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService", "JPlagServicePort");
     private static final Class JPlagTyp_PortClass = edu.illinois.cs.comoto.jplag.wsdl.JPlagTyp.class;
 
     public JPlagService_Impl() {

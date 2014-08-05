@@ -53,7 +53,7 @@ import java.util.ArrayList;
 
 public class RequestDataArray_LiteralSerializer extends LiteralObjectSerializerBase implements Initializable {
     private static final javax.xml.namespace.QName ns1_items_QNAME = new QName("", "items");
-    private static final javax.xml.namespace.QName ns3_RequestData_TYPE_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "RequestData");
+    private static final javax.xml.namespace.QName ns3_RequestData_TYPE_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "RequestData");
     private CombinedSerializer ns3_myRequestData_LiteralSerializer;
 
     public RequestDataArray_LiteralSerializer(javax.xml.namespace.QName type, java.lang.String encodingStyle) {

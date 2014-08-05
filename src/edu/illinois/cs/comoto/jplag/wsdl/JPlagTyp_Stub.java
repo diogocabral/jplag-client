@@ -69,7 +69,7 @@ public class JPlagTyp_Stub
     */
     public JPlagTyp_Stub(HandlerChain handlerChain) {
         super(handlerChain);
-        _setProperty(ENDPOINT_ADDRESS_PROPERTY, "https://www.ipd.uni-karlsruhe.de/jplag/JPlagService/service");
+        _setProperty(ENDPOINT_ADDRESS_PROPERTY, "https://jplag.ipd.kit.edu:443/JPlagService/service");
     }
 
 
@@ -847,7 +847,7 @@ public class JPlagTyp_Stub
             _bodyBlock.setSerializer(DummySerializer.getInstance());
             _request.setBody(_bodyBlock);
 
-            _state.getMessageContext().setProperty(HttpClientTransport.HTTP_SOAPACTION_PROPERTY, "http://www.ipd.uni-karlsruhe.de/jplag/getServerInfo");
+            _state.getMessageContext().setProperty(HttpClientTransport.HTTP_SOAPACTION_PROPERTY, "http://jplag.ipd.kit.edu/JPlagService/getServerInfo");
 
             _send((java.lang.String) _getProperty(ENDPOINT_ADDRESS_PROPERTY), _state);
 
@@ -1801,85 +1801,85 @@ public class JPlagTyp_Stub
             new edu.illinois.cs.comoto.jplag.wsdl.JPlagTyp_notifyDevelopers_Fault_SOAPSerializer(ENCODE_TYPE, NOT_NULLABLE));
     private final CombinedSerializer myJPlagTyp_compareSource_Fault_SOAPSerializer = new ReferenceableSerializerImpl(DONT_SERIALIZE_AS_REF,
             new edu.illinois.cs.comoto.jplag.wsdl.JPlagTyp_compareSource_Fault_SOAPSerializer(ENCODE_TYPE, NOT_NULLABLE));
-    private static final javax.xml.namespace.QName ns1_cancelSubmission_cancelSubmissionRequestString_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "cancelSubmissionRequestString");
+    private static final javax.xml.namespace.QName ns1_cancelSubmission_cancelSubmissionRequestString_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "cancelSubmissionRequestString");
     private static final javax.xml.namespace.QName ns2_string_TYPE_QNAME = SchemaConstants.QNAME_TYPE_STRING;
     private CombinedSerializer ns2_myns2_string__java_lang_String_String_Serializer;
-    private static final javax.xml.namespace.QName ns1_cancelSubmission_cancelSubmissionDummyInt_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "cancelSubmissionDummyInt");
+    private static final javax.xml.namespace.QName ns1_cancelSubmission_cancelSubmissionDummyInt_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "cancelSubmissionDummyInt");
     private static final javax.xml.namespace.QName ns2_int_TYPE_QNAME = SchemaConstants.QNAME_TYPE_INT;
     private CombinedSerializer ns2_myns2__int__int_Int_Serializer;
-    private static final javax.xml.namespace.QName ns1_setMailTemplate_setMailTemplateParams_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "setMailTemplateParams");
-    private static final javax.xml.namespace.QName ns1_setMailTemplateParams_TYPE_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "setMailTemplateParams");
+    private static final javax.xml.namespace.QName ns1_setMailTemplate_setMailTemplateParams_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "setMailTemplateParams");
+    private static final javax.xml.namespace.QName ns1_setMailTemplateParams_TYPE_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "setMailTemplateParams");
     private CombinedSerializer ns1_mySetMailTemplateParams_LiteralSerializer;
-    private static final javax.xml.namespace.QName ns1_setMailTemplate_setMailTemplateDummyInt_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "setMailTemplateDummyInt");
-    private static final javax.xml.namespace.QName ns1_requestAccount_eRequestData_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "eRequestData");
-    private static final javax.xml.namespace.QName ns1_RequestData_TYPE_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "RequestData");
+    private static final javax.xml.namespace.QName ns1_setMailTemplate_setMailTemplateDummyInt_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "setMailTemplateDummyInt");
+    private static final javax.xml.namespace.QName ns1_requestAccount_eRequestData_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "eRequestData");
+    private static final javax.xml.namespace.QName ns1_RequestData_TYPE_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "RequestData");
     private CombinedSerializer ns1_myRequestData_LiteralSerializer;
-    private static final javax.xml.namespace.QName ns1_requestAccount_requestAccountBoolean_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "requestAccountBoolean");
+    private static final javax.xml.namespace.QName ns1_requestAccount_requestAccountBoolean_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "requestAccountBoolean");
     private static final javax.xml.namespace.QName ns2_boolean_TYPE_QNAME = SchemaConstants.QNAME_TYPE_BOOLEAN;
     private CombinedSerializer ns2_myns2__boolean__boolean_Boolean_Serializer;
-    private static final javax.xml.namespace.QName ns1_extendAccount_extendAccountString_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "extendAccountString");
-    private static final javax.xml.namespace.QName ns1_extendAccount_extendAccountDummyInt_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "extendAccountDummyInt");
-    private static final javax.xml.namespace.QName ns1_finishAccountRequest_FinishRequestData_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "FinishRequestData");
-    private static final javax.xml.namespace.QName ns1_FinishRequestData_TYPE_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "FinishRequestData");
+    private static final javax.xml.namespace.QName ns1_extendAccount_extendAccountString_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "extendAccountString");
+    private static final javax.xml.namespace.QName ns1_extendAccount_extendAccountDummyInt_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "extendAccountDummyInt");
+    private static final javax.xml.namespace.QName ns1_finishAccountRequest_FinishRequestData_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "FinishRequestData");
+    private static final javax.xml.namespace.QName ns1_FinishRequestData_TYPE_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "FinishRequestData");
     private CombinedSerializer ns1_myFinishRequestData_LiteralSerializer;
-    private static final javax.xml.namespace.QName ns1_finishAccountRequest_finishAccountRequestDummyInt_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "finishAccountRequestDummyInt");
-    private static final javax.xml.namespace.QName ns1_startSubmissionUpload_startSubmissionUploadParams_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "startSubmissionUploadParams");
-    private static final javax.xml.namespace.QName ns1_startSubmissionUploadParams_TYPE_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "startSubmissionUploadParams");
+    private static final javax.xml.namespace.QName ns1_finishAccountRequest_finishAccountRequestDummyInt_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "finishAccountRequestDummyInt");
+    private static final javax.xml.namespace.QName ns1_startSubmissionUpload_startSubmissionUploadParams_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "startSubmissionUploadParams");
+    private static final javax.xml.namespace.QName ns1_startSubmissionUploadParams_TYPE_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "startSubmissionUploadParams");
     private CombinedSerializer ns1_myStartSubmissionUploadParams_LiteralSerializer;
-    private static final javax.xml.namespace.QName ns1_startSubmissionUpload_startSubmissionUploadResponseString_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "startSubmissionUploadResponseString");
-    private static final javax.xml.namespace.QName ns1_updateUserInfo_updateUserInfoParams_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "updateUserInfoParams");
-    private static final javax.xml.namespace.QName ns1_updateUserInfoParams_TYPE_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "updateUserInfoParams");
+    private static final javax.xml.namespace.QName ns1_startSubmissionUpload_startSubmissionUploadResponseString_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "startSubmissionUploadResponseString");
+    private static final javax.xml.namespace.QName ns1_updateUserInfo_updateUserInfoParams_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "updateUserInfoParams");
+    private static final javax.xml.namespace.QName ns1_updateUserInfoParams_TYPE_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "updateUserInfoParams");
     private CombinedSerializer ns1_myUpdateUserInfoParams_LiteralSerializer;
-    private static final javax.xml.namespace.QName ns1_updateUserInfo_updateUserInfoDummyInt_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "updateUserInfoDummyInt");
-    private static final javax.xml.namespace.QName ns1_continueResultDownload_continueResultDownloadDummyInt_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "continueResultDownloadDummyInt");
-    private static final javax.xml.namespace.QName ns1_continueResultDownload_continueResultDownloadData_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "continueResultDownloadData");
+    private static final javax.xml.namespace.QName ns1_updateUserInfo_updateUserInfoDummyInt_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "updateUserInfoDummyInt");
+    private static final javax.xml.namespace.QName ns1_continueResultDownload_continueResultDownloadDummyInt_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "continueResultDownloadDummyInt");
+    private static final javax.xml.namespace.QName ns1_continueResultDownload_continueResultDownloadData_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "continueResultDownloadData");
     private static final javax.xml.namespace.QName ns2_base64Binary_TYPE_QNAME = SchemaConstants.QNAME_TYPE_BASE64_BINARY;
     private CombinedSerializer ns2_myns2_base64Binary__byte_Base64Binary_Serializer;
-    private static final javax.xml.namespace.QName ns1_setUserData_setUserDataParams_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "setUserDataParams");
-    private static final javax.xml.namespace.QName ns1_setUserDataParams_TYPE_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "setUserDataParams");
+    private static final javax.xml.namespace.QName ns1_setUserData_setUserDataParams_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "setUserDataParams");
+    private static final javax.xml.namespace.QName ns1_setUserDataParams_TYPE_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "setUserDataParams");
     private CombinedSerializer ns1_mySetUserDataParams_LiteralSerializer;
-    private static final javax.xml.namespace.QName ns1_setUserData_setUserDataDummyInt_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "setUserDataDummyInt");
-    private static final javax.xml.namespace.QName ns1_continueSubmissionUpload_continueSubmissionUploadData_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "continueSubmissionUploadData");
-    private static final javax.xml.namespace.QName ns1_continueSubmissionUpload_continueSubmissionUploadDummyInt_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "continueSubmissionUploadDummyInt");
-    private static final javax.xml.namespace.QName ns1_getMailTemplates_getMailTemplatesInt_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "getMailTemplatesInt");
-    private static final javax.xml.namespace.QName ns1_getMailTemplates_MailTemplateArray_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "MailTemplateArray");
-    private static final javax.xml.namespace.QName ns1_MailTemplateArray_TYPE_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "MailTemplateArray");
+    private static final javax.xml.namespace.QName ns1_setUserData_setUserDataDummyInt_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "setUserDataDummyInt");
+    private static final javax.xml.namespace.QName ns1_continueSubmissionUpload_continueSubmissionUploadData_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "continueSubmissionUploadData");
+    private static final javax.xml.namespace.QName ns1_continueSubmissionUpload_continueSubmissionUploadDummyInt_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "continueSubmissionUploadDummyInt");
+    private static final javax.xml.namespace.QName ns1_getMailTemplates_getMailTemplatesInt_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "getMailTemplatesInt");
+    private static final javax.xml.namespace.QName ns1_getMailTemplates_MailTemplateArray_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "MailTemplateArray");
+    private static final javax.xml.namespace.QName ns1_MailTemplateArray_TYPE_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "MailTemplateArray");
     private CombinedSerializer ns1_myMailTemplateArray_LiteralSerializer;
-    private static final javax.xml.namespace.QName ns1_startResultDownload_startResultDownloadRequestString_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "startResultDownloadRequestString");
-    private static final javax.xml.namespace.QName ns1_startResultDownload_startResultDownloadData_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "startResultDownloadData");
-    private static final javax.xml.namespace.QName ns1_startResultDownloadData_TYPE_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "startResultDownloadData");
+    private static final javax.xml.namespace.QName ns1_startResultDownload_startResultDownloadRequestString_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "startResultDownloadRequestString");
+    private static final javax.xml.namespace.QName ns1_startResultDownload_startResultDownloadData_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "startResultDownloadData");
+    private static final javax.xml.namespace.QName ns1_startResultDownloadData_TYPE_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "startResultDownloadData");
     private CombinedSerializer ns1_myStartResultDownloadData_LiteralSerializer;
-    private static final javax.xml.namespace.QName ns1_setDeveloperState_setDeveloperStateParams_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "setDeveloperStateParams");
-    private static final javax.xml.namespace.QName ns1_setDeveloperStateParams_TYPE_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "setDeveloperStateParams");
+    private static final javax.xml.namespace.QName ns1_setDeveloperState_setDeveloperStateParams_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "setDeveloperStateParams");
+    private static final javax.xml.namespace.QName ns1_setDeveloperStateParams_TYPE_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "setDeveloperStateParams");
     private CombinedSerializer ns1_mySetDeveloperStateParams_LiteralSerializer;
-    private static final javax.xml.namespace.QName ns1_setDeveloperState_setDeveloperStateDummyInt_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "setDeveloperStateDummyInt");
-    private static final javax.xml.namespace.QName ns1_getStatus_getStatusRequestString_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "getStatusRequestString");
-    private static final javax.xml.namespace.QName ns1_getStatus_Status_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "Status");
-    private static final javax.xml.namespace.QName ns1_Status_TYPE_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "Status");
+    private static final javax.xml.namespace.QName ns1_setDeveloperState_setDeveloperStateDummyInt_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "setDeveloperStateDummyInt");
+    private static final javax.xml.namespace.QName ns1_getStatus_getStatusRequestString_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "getStatusRequestString");
+    private static final javax.xml.namespace.QName ns1_getStatus_Status_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "Status");
+    private static final javax.xml.namespace.QName ns1_Status_TYPE_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "Status");
     private CombinedSerializer ns1_myStatus_LiteralSerializer;
-    private static final javax.xml.namespace.QName ns1_getServerInfo_ServerInfo_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "ServerInfo");
-    private static final javax.xml.namespace.QName ns1_ServerInfo_TYPE_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "ServerInfo");
+    private static final javax.xml.namespace.QName ns1_getServerInfo_ServerInfo_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "ServerInfo");
+    private static final javax.xml.namespace.QName ns1_ServerInfo_TYPE_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "ServerInfo");
     private CombinedSerializer ns1_myServerInfo_LiteralSerializer;
-    private static final javax.xml.namespace.QName ns1_getResult_getResultRequestString_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "getResultRequestString");
-    private static final javax.xml.namespace.QName ns1_getUserDataArray_getUserDataArrayDummyInt_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "getUserDataArrayDummyInt");
-    private static final javax.xml.namespace.QName ns1_getUserDataArray_UserDataArray_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "UserDataArray");
-    private static final javax.xml.namespace.QName ns1_UserDataArray_TYPE_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "UserDataArray");
+    private static final javax.xml.namespace.QName ns1_getResult_getResultRequestString_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "getResultRequestString");
+    private static final javax.xml.namespace.QName ns1_getUserDataArray_getUserDataArrayDummyInt_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "getUserDataArrayDummyInt");
+    private static final javax.xml.namespace.QName ns1_getUserDataArray_UserDataArray_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "UserDataArray");
+    private static final javax.xml.namespace.QName ns1_UserDataArray_TYPE_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "UserDataArray");
     private CombinedSerializer ns1_myUserDataArray_LiteralSerializer;
-    private static final javax.xml.namespace.QName ns1_getAccountRequests_getAccountRequestsLenOnlyBoolean_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "getAccountRequestsLenOnlyBoolean");
-    private static final javax.xml.namespace.QName ns1_getAccountRequests_RequestDataArray_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "RequestDataArray");
-    private static final javax.xml.namespace.QName ns1_RequestDataArray_TYPE_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "RequestDataArray");
+    private static final javax.xml.namespace.QName ns1_getAccountRequests_getAccountRequestsLenOnlyBoolean_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "getAccountRequestsLenOnlyBoolean");
+    private static final javax.xml.namespace.QName ns1_getAccountRequests_RequestDataArray_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "RequestDataArray");
+    private static final javax.xml.namespace.QName ns1_RequestDataArray_TYPE_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "RequestDataArray");
     private CombinedSerializer ns1_myRequestDataArray_LiteralSerializer;
-    private static final javax.xml.namespace.QName ns1_notifyDevelopers_notifyDevelopersParams_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "notifyDevelopersParams");
-    private static final javax.xml.namespace.QName ns1_notifyDevelopersParams_TYPE_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "notifyDevelopersParams");
+    private static final javax.xml.namespace.QName ns1_notifyDevelopers_notifyDevelopersParams_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "notifyDevelopersParams");
+    private static final javax.xml.namespace.QName ns1_notifyDevelopersParams_TYPE_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "notifyDevelopersParams");
     private CombinedSerializer ns1_myNotifyDevelopersParams_LiteralSerializer;
-    private static final javax.xml.namespace.QName ns1_notifyDevelopers_notifyDevelopersDummyInt_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "notifyDevelopersDummyInt");
-    private static final javax.xml.namespace.QName ns1_compareSource_eOption_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "eOption");
-    private static final javax.xml.namespace.QName ns1_Option_TYPE_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "Option");
+    private static final javax.xml.namespace.QName ns1_notifyDevelopers_notifyDevelopersDummyInt_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "notifyDevelopersDummyInt");
+    private static final javax.xml.namespace.QName ns1_compareSource_eOption_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "eOption");
+    private static final javax.xml.namespace.QName ns1_Option_TYPE_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "Option");
     private CombinedSerializer ns1_myOption_LiteralSerializer;
-    private static final javax.xml.namespace.QName ns1_compareSource_compareSourceResponseString_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "compareSourceResponseString");
+    private static final javax.xml.namespace.QName ns1_compareSource_compareSourceResponseString_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "compareSourceResponseString");
     private static final java.lang.String[] myNamespace_declarations =
             new java.lang.String[]{
-                    "ns0", "http://www.ipd.uni-karlsruhe.de/jplag/types"
+                    "ns0", "http://jplag.ipd.kit.edu/JPlagService/types"
             };
 
     private static final QName[] understoodHeaderNames = new QName[]{};

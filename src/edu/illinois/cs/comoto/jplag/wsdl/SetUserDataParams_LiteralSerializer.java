@@ -53,7 +53,7 @@ import javax.xml.namespace.QName;
 
 public class SetUserDataParams_LiteralSerializer extends LiteralObjectSerializerBase implements Initializable {
     private static final javax.xml.namespace.QName ns1_userdata_QNAME = new QName("", "userdata");
-    private static final javax.xml.namespace.QName ns3_UserData_TYPE_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "UserData");
+    private static final javax.xml.namespace.QName ns3_UserData_TYPE_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "UserData");
     private CombinedSerializer ns3_myUserData_LiteralSerializer;
     private static final javax.xml.namespace.QName ns1_oldUsername_QNAME = new QName("", "oldUsername");
     private static final javax.xml.namespace.QName ns2_string_TYPE_QNAME = SchemaConstants.QNAME_TYPE_STRING;

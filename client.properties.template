@@ -34,7 +34,7 @@
 # CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS WITH THE SOFTWARE.
 #
-jplag.username = jplagusername
-jplag.password = jplagpassword
+jplag.username = rodrigo
+jplag.password = lds12345
 ldap.username = ldapusername
 ldap.password = ldappassword

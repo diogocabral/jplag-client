@@ -54,16 +54,16 @@ import java.util.ArrayList;
 
 public class ServerInfo_LiteralSerializer extends LiteralObjectSerializerBase implements Initializable {
     private static final javax.xml.namespace.QName ns1_userInfo_QNAME = new QName("", "userInfo");
-    private static final javax.xml.namespace.QName ns3_UserInfo_TYPE_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "UserInfo");
+    private static final javax.xml.namespace.QName ns3_UserInfo_TYPE_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "UserInfo");
     private CombinedSerializer ns3_myUserInfo_LiteralSerializer;
     private static final javax.xml.namespace.QName ns1_languageInfos_QNAME = new QName("", "languageInfos");
-    private static final javax.xml.namespace.QName ns3_LanguageInfo_TYPE_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "LanguageInfo");
+    private static final javax.xml.namespace.QName ns3_LanguageInfo_TYPE_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "LanguageInfo");
     private CombinedSerializer ns3_myLanguageInfo_LiteralSerializer;
     private static final javax.xml.namespace.QName ns1_countryLanguages_QNAME = new QName("", "countryLanguages");
     private static final javax.xml.namespace.QName ns2_string_TYPE_QNAME = SchemaConstants.QNAME_TYPE_STRING;
     private CombinedSerializer ns2_myns2_string__java_lang_String_String_Serializer;
     private static final javax.xml.namespace.QName ns1_submissions_QNAME = new QName("", "submissions");
-    private static final javax.xml.namespace.QName ns3_Submission_TYPE_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "Submission");
+    private static final javax.xml.namespace.QName ns3_Submission_TYPE_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "Submission");
     private CombinedSerializer ns3_mySubmission_LiteralSerializer;
 
     public ServerInfo_LiteralSerializer(javax.xml.namespace.QName type, java.lang.String encodingStyle) {

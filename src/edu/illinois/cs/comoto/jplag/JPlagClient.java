@@ -37,12 +37,17 @@
 
 package edu.illinois.cs.comoto.jplag;
 
-import edu.illinois.cs.comoto.jplag.LDAP.StudentData;
-import edu.illinois.cs.comoto.jplag.LDAP.UIUCLDAPDownloader;
-import edu.illinois.cs.comoto.jplag.anonymize.FileAnonymizer;
-import edu.illinois.cs.comoto.jplag.anonymize.FileDeAnonymizer;
-import edu.illinois.cs.comoto.jplag.util.*;
-import edu.illinois.cs.comoto.jplag.wsdl.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.FilenameFilter;
+import java.io.IOException;
+import java.security.cert.X509Certificate;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Iterator;
+import java.util.Vector;
 
 import javax.activation.DataHandler;
 import javax.activation.FileDataSource;
@@ -54,13 +59,20 @@ import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
 import javax.xml.rpc.handler.Handler;
 import javax.xml.rpc.handler.HandlerChain;
-import java.io.*;
-import java.security.cert.X509Certificate;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Iterator;
-import java.util.Vector;
+
+import edu.illinois.cs.comoto.jplag.util.ClientUtil;
+import edu.illinois.cs.comoto.jplag.util.CmdLineParser;
+import edu.illinois.cs.comoto.jplag.util.CoMoToOption;
+import edu.illinois.cs.comoto.jplag.util.JPlagClientAccessHandler;
+import edu.illinois.cs.comoto.jplag.util.NonRecursiveFilenameFilter;
+import edu.illinois.cs.comoto.jplag.util.NullStringAllowingStringOption;
+import edu.illinois.cs.comoto.jplag.util.RecursiveFilenameFilter;
+import edu.illinois.cs.comoto.jplag.util.ZipUtil;
+import edu.illinois.cs.comoto.jplag.wsdl.JPlagService_Impl;
+import edu.illinois.cs.comoto.jplag.wsdl.JPlagTyp_Stub;
+import edu.illinois.cs.comoto.jplag.wsdl.LanguageInfo;
+import edu.illinois.cs.comoto.jplag.wsdl.ServerInfo;
+import edu.illinois.cs.comoto.jplag.wsdl.Status;
 
 /**
  * Created by IntelliJ IDEA.
@@ -88,7 +100,7 @@ public class JPlagClient {
     private CoMoToOption option;
     private JPlagTyp_Stub stub = null;
     private FilenameFilter subdirFileFilter = null;
-    private StudentData studentData = null;
+//    private StudentData studentData = null;
 
     public JPlagClient(String[] args) {
         run(args);
@@ -438,10 +450,10 @@ public class JPlagClient {
     private String sendSubmission() {
         Vector<File> submissionFiles = collectFiles();
 
-        if (option.isAnonymize()) {
-            studentData = new UIUCLDAPDownloader().getStudentData();
-            submissionFiles = new FileAnonymizer(studentData).anonymizeFiles(submissionFiles);
-        }
+//        if (option.isAnonymize()) {
+//            studentData = new UIUCLDAPDownloader().getStudentData();
+//            submissionFiles = new FileAnonymizer(studentData).anonymizeFiles(submissionFiles);
+//        }
 
         if (submissionFiles == null) return null;
 
@@ -594,9 +606,9 @@ public class JPlagClient {
              * so remove it from server now
              */
             stub.cancelSubmission(submissionID);
-            if (option.isAnonymize()) {
-                new FileDeAnonymizer(studentData).deanonymizeFiles(resultDir);
-            }
+//            if (option.isAnonymize()) {
+//                new FileDeAnonymizer(studentData).deanonymizeFiles(resultDir);
+//            }
         } catch (Exception e) {
             if (output != null) {
                 try {

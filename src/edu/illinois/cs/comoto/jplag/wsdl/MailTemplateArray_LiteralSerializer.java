@@ -53,7 +53,7 @@ import java.util.ArrayList;
 
 public class MailTemplateArray_LiteralSerializer extends LiteralObjectSerializerBase implements Initializable {
     private static final javax.xml.namespace.QName ns1_items_QNAME = new QName("", "items");
-    private static final javax.xml.namespace.QName ns3_MailTemplate_TYPE_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "MailTemplate");
+    private static final javax.xml.namespace.QName ns3_MailTemplate_TYPE_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "MailTemplate");
     private CombinedSerializer ns3_myMailTemplate_LiteralSerializer;
 
     public MailTemplateArray_LiteralSerializer(javax.xml.namespace.QName type, java.lang.String encodingStyle) {

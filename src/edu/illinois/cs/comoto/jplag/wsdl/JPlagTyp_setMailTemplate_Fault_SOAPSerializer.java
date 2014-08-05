@@ -53,8 +53,8 @@ import com.sun.xml.rpc.streaming.XMLWriter;
 import javax.xml.namespace.QName;
 
 public class JPlagTyp_setMailTemplate_Fault_SOAPSerializer extends SOAPFaultInfoSerializer {
-    private static final javax.xml.namespace.QName ns1_JPlagException_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "JPlagException");
-    private static final javax.xml.namespace.QName ns1_JPlagException_TYPE_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "JPlagException");
+    private static final javax.xml.namespace.QName ns1_JPlagException_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "JPlagException");
+    private static final javax.xml.namespace.QName ns1_JPlagException_TYPE_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "JPlagException");
     private CombinedSerializer ns1_myJPlagException_LiteralSerializer;
     private CombinedSerializer ns1_myJPlagException_LiteralSerializer_Serializer;
     private static final int JPLAGTUTORIAL_JPLAGCLIENT_JPLAGEXCEPTION_INDEX = 0;

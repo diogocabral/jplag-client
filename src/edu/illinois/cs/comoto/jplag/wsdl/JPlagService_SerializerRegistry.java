@@ -70,22 +70,22 @@ public class JPlagService_SerializerRegistry implements SerializerConstants {
         TypeMapping mapping = registry.getTypeMapping(SOAPConstants.NS_SOAP_ENCODING);
         TypeMapping mapping2 = registry.getTypeMapping("");
         {
-            QName type = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "startSubmissionUploadParams");
+            QName type = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "startSubmissionUploadParams");
             CombinedSerializer serializer = new edu.illinois.cs.comoto.jplag.wsdl.StartSubmissionUploadParams_LiteralSerializer(type, "", DONT_ENCODE_TYPE);
             registerSerializer(mapping2, edu.illinois.cs.comoto.jplag.wsdl.StartSubmissionUploadParams.class, type, serializer);
         }
         {
-            QName type = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "Option");
+            QName type = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "Option");
             CombinedSerializer serializer = new edu.illinois.cs.comoto.jplag.wsdl.Option_LiteralSerializer(type, "", DONT_ENCODE_TYPE);
             registerSerializer(mapping2, edu.illinois.cs.comoto.jplag.wsdl.Option.class, type, serializer);
         }
         {
-            QName type = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "Submission");
+            QName type = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "Submission");
             CombinedSerializer serializer = new edu.illinois.cs.comoto.jplag.wsdl.Submission_LiteralSerializer(type, "", DONT_ENCODE_TYPE);
             registerSerializer(mapping2, edu.illinois.cs.comoto.jplag.wsdl.Submission.class, type, serializer);
         }
         {
-            QName type = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "MailTemplate");
+            QName type = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "MailTemplate");
             CombinedSerializer serializer = new edu.illinois.cs.comoto.jplag.wsdl.MailTemplate_LiteralSerializer(type, "", DONT_ENCODE_TYPE);
             registerSerializer(mapping2, edu.illinois.cs.comoto.jplag.wsdl.MailTemplate.class, type, serializer);
         }
@@ -95,87 +95,87 @@ public class JPlagService_SerializerRegistry implements SerializerConstants {
             registerSerializer(mapping2, byte[].class, SchemaConstants.QNAME_TYPE_BASE64_BINARY, serializer);
         }
         {
-            QName type = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "UserInfo");
+            QName type = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "UserInfo");
             CombinedSerializer serializer = new edu.illinois.cs.comoto.jplag.wsdl.UserInfo_LiteralSerializer(type, "", DONT_ENCODE_TYPE);
             registerSerializer(mapping2, edu.illinois.cs.comoto.jplag.wsdl.UserInfo.class, type, serializer);
         }
         {
-            QName type = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "startResultDownloadData");
+            QName type = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "startResultDownloadData");
             CombinedSerializer serializer = new edu.illinois.cs.comoto.jplag.wsdl.StartResultDownloadData_LiteralSerializer(type, "", DONT_ENCODE_TYPE);
             registerSerializer(mapping2, edu.illinois.cs.comoto.jplag.wsdl.StartResultDownloadData.class, type, serializer);
         }
         {
-            QName type = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "JPlagException");
+            QName type = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "JPlagException");
             CombinedSerializer serializer = new edu.illinois.cs.comoto.jplag.wsdl.JPlagException_LiteralSerializer(type, "", DONT_ENCODE_TYPE);
             registerSerializer(mapping2, edu.illinois.cs.comoto.jplag.wsdl.JPlagException.class, type, serializer);
         }
         {
-            QName type = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "LanguageInfo");
+            QName type = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "LanguageInfo");
             CombinedSerializer serializer = new edu.illinois.cs.comoto.jplag.wsdl.LanguageInfo_LiteralSerializer(type, "", DONT_ENCODE_TYPE);
             registerSerializer(mapping2, edu.illinois.cs.comoto.jplag.wsdl.LanguageInfo.class, type, serializer);
         }
         {
-            QName type = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "setMailTemplateParams");
+            QName type = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "setMailTemplateParams");
             CombinedSerializer serializer = new edu.illinois.cs.comoto.jplag.wsdl.SetMailTemplateParams_LiteralSerializer(type, "", DONT_ENCODE_TYPE);
             registerSerializer(mapping2, edu.illinois.cs.comoto.jplag.wsdl.SetMailTemplateParams.class, type, serializer);
         }
         {
-            QName type = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "UserData");
+            QName type = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "UserData");
             CombinedSerializer serializer = new edu.illinois.cs.comoto.jplag.wsdl.UserData_LiteralSerializer(type, "", DONT_ENCODE_TYPE);
             registerSerializer(mapping2, edu.illinois.cs.comoto.jplag.wsdl.UserData.class, type, serializer);
         }
         {
-            QName type = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "setDeveloperStateParams");
+            QName type = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "setDeveloperStateParams");
             CombinedSerializer serializer = new edu.illinois.cs.comoto.jplag.wsdl.SetDeveloperStateParams_LiteralSerializer(type, "", DONT_ENCODE_TYPE);
             registerSerializer(mapping2, edu.illinois.cs.comoto.jplag.wsdl.SetDeveloperStateParams.class, type, serializer);
         }
         {
-            QName type = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "ServerInfo");
+            QName type = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "ServerInfo");
             CombinedSerializer serializer = new edu.illinois.cs.comoto.jplag.wsdl.ServerInfo_LiteralSerializer(type, "", DONT_ENCODE_TYPE);
             registerSerializer(mapping2, edu.illinois.cs.comoto.jplag.wsdl.ServerInfo.class, type, serializer);
         }
         {
-            QName type = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "Status");
+            QName type = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "Status");
             CombinedSerializer serializer = new edu.illinois.cs.comoto.jplag.wsdl.Status_LiteralSerializer(type, "", DONT_ENCODE_TYPE);
             registerSerializer(mapping2, edu.illinois.cs.comoto.jplag.wsdl.Status.class, type, serializer);
         }
         {
-            QName type = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "FinishRequestData");
+            QName type = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "FinishRequestData");
             CombinedSerializer serializer = new edu.illinois.cs.comoto.jplag.wsdl.FinishRequestData_LiteralSerializer(type, "", DONT_ENCODE_TYPE);
             registerSerializer(mapping2, edu.illinois.cs.comoto.jplag.wsdl.FinishRequestData.class, type, serializer);
         }
         {
-            QName type = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "MailTemplateArray");
+            QName type = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "MailTemplateArray");
             CombinedSerializer serializer = new edu.illinois.cs.comoto.jplag.wsdl.MailTemplateArray_LiteralSerializer(type, "", DONT_ENCODE_TYPE);
             registerSerializer(mapping2, edu.illinois.cs.comoto.jplag.wsdl.MailTemplateArray.class, type, serializer);
         }
         {
-            QName type = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "notifyDevelopersParams");
+            QName type = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "notifyDevelopersParams");
             CombinedSerializer serializer = new edu.illinois.cs.comoto.jplag.wsdl.NotifyDevelopersParams_LiteralSerializer(type, "", DONT_ENCODE_TYPE);
             registerSerializer(mapping2, edu.illinois.cs.comoto.jplag.wsdl.NotifyDevelopersParams.class, type, serializer);
         }
         {
-            QName type = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "updateUserInfoParams");
+            QName type = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "updateUserInfoParams");
             CombinedSerializer serializer = new edu.illinois.cs.comoto.jplag.wsdl.UpdateUserInfoParams_LiteralSerializer(type, "", DONT_ENCODE_TYPE);
             registerSerializer(mapping2, edu.illinois.cs.comoto.jplag.wsdl.UpdateUserInfoParams.class, type, serializer);
         }
         {
-            QName type = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "RequestData");
+            QName type = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "RequestData");
             CombinedSerializer serializer = new edu.illinois.cs.comoto.jplag.wsdl.RequestData_LiteralSerializer(type, "", DONT_ENCODE_TYPE);
             registerSerializer(mapping2, edu.illinois.cs.comoto.jplag.wsdl.RequestData.class, type, serializer);
         }
         {
-            QName type = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "UserDataArray");
+            QName type = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "UserDataArray");
             CombinedSerializer serializer = new edu.illinois.cs.comoto.jplag.wsdl.UserDataArray_LiteralSerializer(type, "", DONT_ENCODE_TYPE);
             registerSerializer(mapping2, edu.illinois.cs.comoto.jplag.wsdl.UserDataArray.class, type, serializer);
         }
         {
-            QName type = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "RequestDataArray");
+            QName type = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "RequestDataArray");
             CombinedSerializer serializer = new edu.illinois.cs.comoto.jplag.wsdl.RequestDataArray_LiteralSerializer(type, "", DONT_ENCODE_TYPE);
             registerSerializer(mapping2, edu.illinois.cs.comoto.jplag.wsdl.RequestDataArray.class, type, serializer);
         }
         {
-            QName type = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "setUserDataParams");
+            QName type = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "setUserDataParams");
             CombinedSerializer serializer = new edu.illinois.cs.comoto.jplag.wsdl.SetUserDataParams_LiteralSerializer(type, "", DONT_ENCODE_TYPE);
             registerSerializer(mapping2, edu.illinois.cs.comoto.jplag.wsdl.SetUserDataParams.class, type, serializer);
         }

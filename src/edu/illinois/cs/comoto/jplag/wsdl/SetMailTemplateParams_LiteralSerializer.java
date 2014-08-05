@@ -56,7 +56,7 @@ public class SetMailTemplateParams_LiteralSerializer extends LiteralObjectSerial
     private static final javax.xml.namespace.QName ns2_int_TYPE_QNAME = SchemaConstants.QNAME_TYPE_INT;
     private CombinedSerializer ns2_myns2__int__int_Int_Serializer;
     private static final javax.xml.namespace.QName ns1_template_QNAME = new QName("", "template");
-    private static final javax.xml.namespace.QName ns3_MailTemplate_TYPE_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "MailTemplate");
+    private static final javax.xml.namespace.QName ns3_MailTemplate_TYPE_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "MailTemplate");
     private CombinedSerializer ns3_myMailTemplate_LiteralSerializer;
 
     public SetMailTemplateParams_LiteralSerializer(javax.xml.namespace.QName type, java.lang.String encodingStyle) {

@@ -53,7 +53,7 @@ import javax.xml.namespace.QName;
 
 public class StartSubmissionUploadParams_LiteralSerializer extends LiteralObjectSerializerBase implements Initializable {
     private static final javax.xml.namespace.QName ns1_submissionParams_QNAME = new QName("", "submissionParams");
-    private static final javax.xml.namespace.QName ns3_Option_TYPE_QNAME = new QName("http://www.ipd.uni-karlsruhe.de/jplag/types", "Option");
+    private static final javax.xml.namespace.QName ns3_Option_TYPE_QNAME = new QName("http://jplag.ipd.kit.edu/JPlagService/types", "Option");
     private CombinedSerializer ns3_myOption_LiteralSerializer;
     private static final javax.xml.namespace.QName ns1_filesize_QNAME = new QName("", "filesize");
     private static final javax.xml.namespace.QName ns2_int_TYPE_QNAME = SchemaConstants.QNAME_TYPE_INT;
