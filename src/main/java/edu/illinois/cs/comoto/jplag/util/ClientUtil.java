@@ -70,7 +70,6 @@ public class ClientUtil {
                 List<String> propertiesPaths = new LinkedList<String>();
                 propertiesPaths.add(propFileName);
                 propertiesPaths.add(System.getProperty("user.home") + File.separator + propFileName);
-                propertiesPaths.add("/etc/jplag/" + propFileName);
 
                 File propsFile = null;
 

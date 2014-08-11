@@ -252,11 +252,5 @@ public class ZipUtil {
         while ((len = in.read(buffer)) >= 0)
             out.write(buffer, 0, len);
     }
-
-    public static void main(String[] args) {
-        // zip(new File("/home/bikiri/Desktop/jplag-old"),
-        // "/home/bikiri/Desktop");
-        unzip(new File("/home/bikiri/Desktop/emma.zip"),
-                new File("/home/bikiri/Desktop", "unzipresult"));
-    }
+    
 }
