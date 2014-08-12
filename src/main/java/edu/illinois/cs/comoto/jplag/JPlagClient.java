@@ -627,6 +627,12 @@ public class JPlagClient {
 
 
     public static void main(String[] args) {
-        new JPlagClient(args);
+//    	-l c/c++ -s \temp\705301 --subdirs -d \temp
+    	
+    	File directory = new File("c:\\temp\\comparisons");
+    	for (String subDirectory : directory.list()) {
+    		System.out.println(subDirectory);
+    		new JPlagClient(new String[] {"-l", "c/c++", "-s", "\\temp\\comparisons\\" + subDirectory, "--subdirs", "-d", "\\temp\\comparisons\\" + subDirectory + "\\results"});
+    	}
     }
 }
