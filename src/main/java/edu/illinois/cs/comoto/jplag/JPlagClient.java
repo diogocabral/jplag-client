@@ -38,7 +38,6 @@
 package edu.illinois.cs.comoto.jplag;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.FilenameFilter;
 import java.io.IOException;
@@ -212,7 +211,7 @@ public class JPlagClient {
         boolean anonymize = ((Boolean) parser.getOptionValue(anonymizeOption, Boolean.FALSE)).booleanValue();
         String cluster = (String) parser.getOptionValue(clusterOption, "none");
 
-        if (!sourceDir.startsWith("/")) {
+        if (!sourceDir.startsWith(File.separator)) {
             try {
                 sourceDir = new File(".").getCanonicalPath() + File.separator + sourceDir;
             } catch (IOException e) {
@@ -423,10 +422,13 @@ public class JPlagClient {
          * Search for the JPlagClientAccessHandler in the handler chain
          */
         HandlerChain handlerchain = stub._getHandlerChain();
-        Iterator handlers = handlerchain.iterator();
+        
+        @SuppressWarnings("unchecked")
+		Iterator<Handler> handlers = handlerchain.iterator();
+        
         JPlagClientAccessHandler accessHandler = null;
         while (handlers.hasNext()) {
-            Handler handler = (Handler) handlers.next();
+            Handler handler = handlers.next();
             if (handler instanceof JPlagClientAccessHandler) {
                 accessHandler = (JPlagClientAccessHandler) handler;
                 break;
@@ -458,7 +460,6 @@ public class JPlagClient {
         if (submissionFiles == null) return null;
 
         File zipfile = null;
-        FileInputStream input = null;
         String submissionID = null;
 
         try {
